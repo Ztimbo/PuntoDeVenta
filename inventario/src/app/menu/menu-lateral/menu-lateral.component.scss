@@ -1,0 +1,47 @@
+#menu {
+    height: 100%;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        li:hover {
+            background: #2a8cc0;
+
+            a, 
+            .menu-icons, 
+            .menu-arrow-icons {
+                color: #27313A;
+            }
+        }
+    }
+}
+
+.menu-icons {
+    color: white;
+    vertical-align:middle;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.menu-arrow-icons {
+    color: white;
+    vertical-align:middle;
+    font-size: 20px;
+    float: right;
+    padding-left: 5px;
+    padding-right: 15px;
+}

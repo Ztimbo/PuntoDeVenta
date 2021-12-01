@@ -1,0 +1,31 @@
+.brands-table {
+    width: 100%;
+}
+
+.brands-header-cell {
+    text-align: right;
+}
+
+.brand-list-icons {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.brand-list-icons-edit {
+    color: #007AAE;
+}
+
+.brand-list-icons-delete {
+    color: #D63737;
+    cursor: pointer;   
+}
+
+.brand-list-icons-new {
+    color: #11ac02;
+}
+
+.brand-list-options-column {
+    text-align: end;
+}

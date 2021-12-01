@@ -1,0 +1,54 @@
+#website {
+    display: grid;
+    grid-template-columns: 1fr, 10fr;
+    grid-template-rows: 1fr, 15fr;
+    height: 100%;
+
+    #logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        background: #206D97;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+
+        h2 {
+            color: white;
+            margin: 0px;
+        }
+    }
+
+    #empty-bar {
+        grid-column: 2 / 11;
+        grid-row: 1 / 2;
+        background: #384651;
+    }
+    
+    #usuario-actual {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background: #374552;
+
+        #usuario-actual-container {
+            display: grid;
+            grid-template-rows: 1fr, 4fr;
+            height: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    #menu-lateral {
+        grid-column: 1 / 2;
+        grid-row: 3 / 15;
+        background: #27313A;
+    }
+    
+    #content {
+        grid-column: 2 / 11;
+        grid-row: 2 / 15;
+
+        margin: 30px;
+    }
+}
