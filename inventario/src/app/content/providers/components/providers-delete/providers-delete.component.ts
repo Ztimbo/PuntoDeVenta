@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-providers-delete',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProvidersDeleteComponent implements OnInit {
 
-  constructor() { }
+  public title: string = "Eliminar Proveedor";
+
+  constructor(public dialogRef: MatDialogRef<ProvidersDeleteComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

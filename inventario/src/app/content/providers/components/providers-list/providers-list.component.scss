@@ -1,0 +1,31 @@
+.providers-table {
+    width: 100%;
+}
+
+.providers-header-cell {
+    text-align: right;
+}
+
+.providers-list-icons {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.providers-list-icons-edit {
+    color: #007AAE;
+}
+
+.providers-list-icons-delete {
+    color: #D63737;
+    cursor: pointer;   
+}
+
+.providers-list-icons-new {
+    color: #11ac02;
+}
+
+.providers-list-options-column {
+    text-align: end;
+}

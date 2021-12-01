@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProvidersModule } from './content/providers/app.module-providers';
 import { BrandsModule } from './content/brands/app.module-brands';
 import { MenuModule } from './menu/app.module-menu';
+import { ProductsModule } from './content/products/app.module-products';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuModule } from './menu/app.module-menu';
     BrowserAnimationsModule,
     ProvidersModule,
     BrandsModule,
-    MenuModule
+    MenuModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
