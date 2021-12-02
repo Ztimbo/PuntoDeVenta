@@ -1,0 +1,8 @@
+<inventario-content-title mat-dialog-title [title]="title"></inventario-content-title>
+<div mat-dialog-content>
+  <p>¿Estás seguro de eliminar este producto?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn">Eliminar</button>
+  <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+</div>

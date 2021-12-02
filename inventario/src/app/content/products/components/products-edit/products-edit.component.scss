@@ -1,0 +1,13 @@
+.editar-producto-box {
+    display: grid;
+    grid-template-rows: 1fr, 2fr;
+    width: 30%;
+
+    button {
+        width: 50%;
+    }
+}
+
+.editar-producto-input {
+    width: 100%;
+}

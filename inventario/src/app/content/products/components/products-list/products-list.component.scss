@@ -1,0 +1,31 @@
+.products-table {
+    width: 100%;
+}
+
+.products-header-cell {
+    text-align: right;
+}
+
+.product-list-icons {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.product-list-icons-edit {
+    color: #007AAE;
+}
+
+.product-list-icons-delete {
+    color: #D63737;
+    cursor: pointer;   
+}
+
+.product-list-icons-new {
+    color: #11ac02;
+}
+
+.product-list-options-column {
+    text-align: end;
+}
