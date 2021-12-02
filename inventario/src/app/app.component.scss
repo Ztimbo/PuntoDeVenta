@@ -1,7 +1,7 @@
 #website {
     display: grid;
-    grid-template-columns: 1fr, 10fr;
-    grid-template-rows: 1fr, 15fr;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(0, 1fr));
     height: 100%;
 
     #logo {
@@ -20,7 +20,7 @@
     }
 
     #empty-bar {
-        grid-column: 2 / 11;
+        grid-column: 2 / 8;
         grid-row: 1 / 2;
         background: #384651;
     }
@@ -41,13 +41,13 @@
 
     #menu-lateral {
         grid-column: 1 / 2;
-        grid-row: 3 / 15;
+        grid-row: 3 / 11;
         background: #27313A;
     }
     
     #content {
-        grid-column: 2 / 11;
-        grid-row: 2 / 15;
+        grid-column: 2 / 8;
+        grid-row: 2 / 11;
 
         margin: 30px;
     }

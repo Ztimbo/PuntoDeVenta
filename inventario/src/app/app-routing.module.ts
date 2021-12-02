@@ -4,6 +4,7 @@ import { BrandsContainerComponent } from './content/brands/components/brands-con
 import { BrandsEditComponent } from './content/brands/components/brands-edit/brands-edit.component';
 import { BrandsListComponent } from './content/brands/components/brands-list/brands-list.component';
 import { BrandsNewComponent } from './content/brands/components/brands-new/brands-new.component';
+import { PrincipalDashboardComponent } from './content/dashboard/components/principal-dashboard/principal-dashboard.component';
 import { ProductsContainerComponent } from './content/products/components/products-container/products-container.component';
 import { ProductsEditComponent } from './content/products/components/products-edit/products-edit.component';
 import { ProductsListComponent } from './content/products/components/products-list/products-list.component';
@@ -14,6 +15,7 @@ import { ProvidersListComponent } from './content/providers/components/providers
 import { ProvidersNewComponent } from './content/providers/components/providers-new/providers-new.component';
 
 const routes: Routes = [
+  { path: '', component: PrincipalDashboardComponent },
   { path: 'proveedores', component: ProvidersContainerComponent, children: [
     { path: '', component: ProvidersListComponent },
     { path: 'nuevo', component: ProvidersNewComponent },

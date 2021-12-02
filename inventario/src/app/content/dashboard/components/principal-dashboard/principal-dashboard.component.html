@@ -1,0 +1,46 @@
+<inventario-content-title mat-dialog-title [title]="title"></inventario-content-title> 
+
+<div class="charts-container">
+    <mat-card id="grafica1">
+        <h3>Gráfica Ejemplo</h3>
+        <canvas baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            [plugins]="lineChartPlugins">
+        </canvas>
+    </mat-card>
+    
+    <mat-card id="grafica2">
+        <h3>Gráfica Ejemplo</h3>
+        <canvas baseChart
+            [datasets]="radarChartData"
+            [options]="radarChartOptions"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType">
+        </canvas>
+    </mat-card>
+
+    <mat-card id="grafica3">
+        <h3>Gráfica Ejemplo</h3>
+        <canvas baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType">
+        </canvas>
+    </mat-card>
+
+    <mat-card id="grafica4">
+        <h3>Gráfica Ejemplo</h3>
+        <canvas baseChart height="40%"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+        </canvas>
+    </mat-card>
+</div>

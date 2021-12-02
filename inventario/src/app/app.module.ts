@@ -8,6 +8,7 @@ import { ProvidersModule } from './content/providers/app.module-providers';
 import { BrandsModule } from './content/brands/app.module-brands';
 import { MenuModule } from './menu/app.module-menu';
 import { ProductsModule } from './content/products/app.module-products';
+import { DashboardModule } from './content/dashboard/app.module-dashboard';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductsModule } from './content/products/app.module-products';
     ProvidersModule,
     BrandsModule,
     MenuModule,
-    ProductsModule
+    ProductsModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
