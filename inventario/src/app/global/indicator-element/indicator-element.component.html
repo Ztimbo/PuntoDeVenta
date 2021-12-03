@@ -1,0 +1,71 @@
+<mat-card id="indicator-container" 
+[ngClass]="{ 
+                'indicator-container-yellow': color == 'yellow', 
+                'indicator-container-red': color == 'red',
+                'indicator-container-blue': color == 'blue',
+                'indicator-container-purple': color == 'purple',
+                'indicator-container-green': color == 'green',
+                'indicator-container-grey': color == 'grey'
+            }">
+    
+    <div id="inidicator-content" *ngIf="icon == 'provider'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">local_shipping</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h2>Proveedores</h2>
+            <div class="clearfix"></div>
+            <label>3</label>
+        </div>
+    </div>
+    <div id="inidicator-content" *ngIf="icon == 'brand'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">style</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h2>Marcas</h2>
+            <div class="clearfix"></div>
+            <label>5</label>
+        </div>
+    </div>
+    <div id="inidicator-content" *ngIf="icon == 'product'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">shopping_basket</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h2>Productos</h2>
+            <div class="clearfix"></div>
+            <label>10</label>
+        </div>
+    </div>
+    <div id="inidicator-content" *ngIf="icon == 'most-sold-product'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">stars</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h2>Más Vendido</h2>
+            <div class="clearfix"></div>
+            <label>Aspirina</label>
+        </div>
+    </div>
+    <div id="inidicator-content" *ngIf="icon == 'almost-out-of-stock'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">warning</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h2>Poco Stock</h2>
+            <div class="clearfix"></div>
+            <label>Paracetamol</label>
+        </div>
+    </div>
+    <div id="inidicator-content" *ngIf="icon == 'next-order-scheduled'">
+        <div class="inidicator-icon-container">
+            <mat-icon class="inidicator-icon">schedule</mat-icon>
+        </div>
+        <div class="inidicator-text-container">
+            <h3>Siguiente Entrega</h3>
+            <div class="clearfix"></div>
+            <label>15/01/2022</label>
+        </div>
+    </div>
+</mat-card>

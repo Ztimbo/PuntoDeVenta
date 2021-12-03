@@ -12,10 +12,25 @@ export class PrincipalDashboardComponent implements OnInit {
 
   public title: string = "Información General";
 
+  public indicatorElementRed: string = 'red';
+  public indicatorElementYellow: string = 'yellow';
+  public indicatorElementBlue: string = 'blue';
+  public indicatorElementPurple: string = 'purple';
+  public indicatorElementGreen: string = 'green';
+  public indicatorElementGrey: string = 'grey';
+
+  public indicatorElementProvider: string = 'provider';
+  public indicatorElementBrand: string = 'brand';
+  public indicatorElementProduct: string = 'product';
+  public indicatorElementMostSoldProduct: string = 'most-sold-product';
+  public indicatorElementAlmostOutOfStock: string ='almost-out-of-stock';
+  public indicatorElementNextOrderScheduled: string ='next-order-scheduled';
+
   //Line chart start
   public lineChartData: ChartDataSets[] = [
     { data: [61, 59, 80, 65, 45, 55, 40, 56, 76, 65, 77, 60], label: 'Apple' },
     { data: [57, 50, 75, 87, 43, 46, 37, 48, 67, 56, 70, 50], label: 'Mi' },
+    { data: [70, 98, 45, 67, 12, 45, 67, 87, 36, 68, 99, 85], label: 'Samsung' }
   ];
   
   public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
