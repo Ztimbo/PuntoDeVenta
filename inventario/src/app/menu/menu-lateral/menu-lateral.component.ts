@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuLateralComponent implements OnInit {
 
+  public panelOpenState = false;
+
   constructor() { }
 
   ngOnInit(): void {

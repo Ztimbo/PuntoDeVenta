@@ -13,6 +13,12 @@ export class IndicatorElementComponent implements OnInit {
   @Input()
   public icon: string = '';
 
+  @Input()
+  public header: string = '';
+
+  @Input()
+  public content: string = '';
+
   constructor() { }
 
   ngOnInit(): void {

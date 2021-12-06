@@ -1,6 +1,6 @@
 .charts-container {
     display: grid;
-    height: 35vh;
+    height: 30vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
@@ -34,7 +34,7 @@
 
 #dashboard-container {
     overflow-y: scroll;
-    height: 90%;
+    max-height: 66vh;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }

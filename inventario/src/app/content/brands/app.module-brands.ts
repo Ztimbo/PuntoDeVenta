@@ -13,6 +13,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { GlobalModule } from 'src/app/global/app.module-global';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { BrandsService } from './services/brands.service';
 
 @NgModule({
     declarations: [
@@ -31,7 +33,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatButtonModule,
         MatDialogModule,
         AppRoutingModule,
-        GlobalModule
+        GlobalModule,
+        HttpClientModule
     ],
     exports: [
         BrandsDeleteComponent,
@@ -39,6 +42,9 @@ import { MatDialogModule } from '@angular/material/dialog';
         BrandsListComponent,
         BrandsContainerComponent,
         BrandsNewComponent
+    ],
+    providers: [
+        BrandsService
     ]
 })
 export class BrandsModule { }

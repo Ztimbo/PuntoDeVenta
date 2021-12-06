@@ -1,0 +1,140 @@
+{
+    "providers": [
+        {
+            "providerId": 1,
+            "name": "Provider 1",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider1@email.com"
+        },
+        {
+            "providerId": 2,
+            "name": "Provider 2",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider2@email.com"
+        },
+        {
+            "providerId": 1,
+            "name": "Provider 3",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider3@email.com"
+        },
+        {
+            "providerId": 1,
+            "name": "Provider 4",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider4@email.com"
+        }
+    ],
+    "brands": [
+        { 
+            "brandId": 1, 
+            "name": "Pfitzer", 
+            "description": "Pfitzer desc" 
+        },
+        { 
+            "brandId": 2, 
+            "name": "Bayer", 
+            "description": "Bayer desc" 
+        },
+        { 
+            "brandId": 3, 
+            "name": "Johnson & Johnson", 
+            "description": "Johnson & Johnson desc" 
+        },
+        { 
+            "brandId": 4, 
+            "name": "Moderna", 
+            "description": "Moderna desc" 
+        }
+    ],
+    "categories": [
+        {
+            "categoryId": 1,
+            "name": "Categoría 1",
+            "description": ""
+        },
+        {
+            "categoryId": 2,
+            "name": "Categoría 2",
+            "description": ""
+        }
+    ],
+    "presentations": [
+        {
+            "presentationId": 1,
+            "name": "Presentación 1",
+            "description": ""
+        },
+        {
+            "presentationId": 2,
+            "name": "Presentación 2",
+            "description": ""
+        }
+    ],
+    "products": [
+        { 
+            "productId": 1, 
+            "name": "Aspirina", 
+            "description": "", 
+            "priceBuy": 50,
+            "priceSell": 60,
+            "provider": "Proveedor 1",
+            "brand": "Pfizer",
+            "category": "Category 1",
+            "presentation": "Presentación 1",
+            "barCode": "CODIGODEBARRAS"
+        },
+        { 
+            "productId": 2, 
+            "name": "Omeprazol", 
+            "description": "", 
+            "priceBuy": 50,
+            "priceSell": 60,
+            "provider": "Proveedor 1",
+            "brand": "Pfizer",
+            "category": "Category 1",
+            "presentation": "Presentación 1",
+            "barCode": "CODIGODEBARRAS"
+        },
+        { 
+            "productId": 3, 
+            "name": "Broxol", 
+            "description": "", 
+            "priceBuy": 50,
+            "priceSell": 60,
+            "provider": "Proveedor 1",
+            "brand": "Pfizer",
+            "category": "Category 1",
+            "presentation": "Presentación 1",
+            "barCode": "CODIGODEBARRAS"
+        },
+        { 
+            "productId": 4, 
+            "name": "Amoxicilina", 
+            "description": "", 
+            "priceBuy": 50,
+            "priceSell": 60,
+            "provider": "Proveedor 1",
+            "brand": "Pfizer",
+            "category": "Category 1",
+            "presentation": "Presentación 1",
+            "barCode": "CODIGODEBARRAS"
+        },
+        {
+            "productId": 5, 
+            "name": "Paracetamol", 
+            "description": "", 
+            "priceBuy": 50,
+            "priceSell": 60,
+            "provider": "Proveedor 1",
+            "brand": "Pfizer",
+            "category": "Category 1",
+            "presentation": "Presentación 1",
+            "barCode": "CODIGODEBARRAS"
+        }
+    ]
+}

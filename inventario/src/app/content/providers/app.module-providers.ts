@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +13,7 @@ import { ProvidersDeleteComponent } from './components/providers-delete/provider
 import { ProvidersEditComponent } from './components/providers-edit/providers-edit.component';
 import { ProvidersListComponent } from './components/providers-list/providers-list.component';
 import { ProvidersNewComponent } from './components/providers-new/providers-new.component';
+import { ProvidersService } from './services/providers.service';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,8 @@ import { ProvidersNewComponent } from './components/providers-new/providers-new.
         MatFormFieldModule,
         MatInputModule,
         AppRoutingModule,
-        GlobalModule
+        GlobalModule,
+        HttpClientModule
     ],
     exports: [
         ProvidersNewComponent,
@@ -37,6 +40,9 @@ import { ProvidersNewComponent } from './components/providers-new/providers-new.
         ProvidersListComponent,
         ProvidersContainerComponent,
         ProvidersDeleteComponent
+    ],
+    providers: [
+        ProvidersService
     ]
 })
 export class ProvidersModule { }

@@ -1,0 +1,31 @@
+.categories-table {
+    width: 100%;
+}
+
+.categories-header-cell {
+    text-align: right;
+}
+
+.category-list-icons {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.category-list-icons-edit {
+    color: #007AAE;
+}
+
+.category-list-icons-delete {
+    color: #D63737;
+    cursor: pointer;   
+}
+
+.category-list-icons-new {
+    color: #11ac02;
+}
+
+.category-list-options-column {
+    text-align: end;
+}

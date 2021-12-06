@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Provider } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType, RadialChartOptions } from 'chart.js';
 import { Label, MultiDataSet } from 'ng2-charts';
 import * as pluginDataLabels from 'chartjs-plugin-datalabels';
+import { ProvidersService } from 'src/app/content/providers/services/providers.service';
+import { BrandsService } from 'src/app/content/brands/services/brands.service';
+import { ProductsService } from 'src/app/content/products/services/products.service';
 
 @Component({
   selector: 'inventarios-principal-dashboard',
@@ -19,12 +22,30 @@ export class PrincipalDashboardComponent implements OnInit {
   public indicatorElementGreen: string = 'green';
   public indicatorElementGrey: string = 'grey';
 
-  public indicatorElementProvider: string = 'provider';
-  public indicatorElementBrand: string = 'brand';
-  public indicatorElementProduct: string = 'product';
-  public indicatorElementMostSoldProduct: string = 'most-sold-product';
-  public indicatorElementAlmostOutOfStock: string ='almost-out-of-stock';
-  public indicatorElementNextOrderScheduled: string ='next-order-scheduled';
+  public indicatorElementProvider: string = 'local_shipping';
+  public indicatorElementBrand: string = 'style';
+  public indicatorElementProduct: string = 'shopping_basket';
+  public indicatorElementMostSoldProduct: string = 'stars';
+  public indicatorElementAlmostOutOfStock: string ='warning';
+  public indicatorElementNextOrderScheduled: string ='schedule';
+
+  public indicatorElementProviderHeader: string = 'Proveedores';
+  public indicatorElementProviderContent: string = '';
+
+  public indicatorElementBrandHeader: string = 'Marcas';
+  public indicatorElementBrandContent: string = '';
+
+  public indicatorElementProductHeader: string = 'Productos';
+  public indicatorElementProductContent: string = '';
+
+  public indicatorElementMostSoldProductHeader: string = 'Más Vendido';
+  public indicatorElementMostSoldProductContent: string = 'Paracetamol';
+
+  public indicatorElementAlmostOutOfStockHeader: string = 'Por Terminar';
+  public indicatorElementAlmostOutOfStockContent: string = 'Aspirina';
+
+  public indicatorElementAlmostNextOrderScheduledHeader: string = 'Prox. Entrega';
+  public indicatorElementAlmostNextOrderScheduledContent: string = '15/02/2022';
 
   //Line chart start
   public lineChartData: ChartDataSets[] = [
@@ -91,9 +112,34 @@ export class PrincipalDashboardComponent implements OnInit {
   ];
   //Bar chart end
 
-  constructor() { }
+  constructor(
+    public readonly providersService: ProvidersService,
+    public readonly brandsService: BrandsService,
+    public readonly productsService: ProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.getNumberOfProviders();
+    this.getNumberOfBrands();
+    this.getNumberOfProducts();
+  }
+
+  public getNumberOfProviders(): void {
+    this.providersService.getProviders().subscribe((response) => {
+      this.indicatorElementProviderContent = response.length.toString();
+    });
+  }
+
+  public getNumberOfBrands(): void {
+    this.brandsService.getBrands().subscribe((response) => {
+      this.indicatorElementBrandContent = response.length.toString();
+    });
+  }
+
+  public getNumberOfProducts(): void {
+    this.productsService.getProducts().subscribe((response) => {
+      this.indicatorElementProductContent = response.length.toString();
+    });
   }
 
 }

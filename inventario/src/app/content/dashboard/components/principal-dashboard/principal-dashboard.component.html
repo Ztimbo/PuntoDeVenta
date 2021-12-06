@@ -2,12 +2,36 @@
 
 <div id="dashboard-container">
     <div id="indicator-grid-container">
-        <inventario-indicator-element [color]="indicatorElementRed" [icon]="indicatorElementProvider"></inventario-indicator-element>
-        <inventario-indicator-element [color]="indicatorElementYellow" [icon]="indicatorElementBrand"></inventario-indicator-element>
-        <inventario-indicator-element [color]="indicatorElementBlue" [icon]="indicatorElementProduct"></inventario-indicator-element>
-        <inventario-indicator-element [color]="indicatorElementPurple" [icon]="indicatorElementMostSoldProduct"></inventario-indicator-element>
-        <inventario-indicator-element [color]="indicatorElementGreen" [icon]="indicatorElementAlmostOutOfStock"></inventario-indicator-element>
-        <inventario-indicator-element [color]="indicatorElementGrey" [icon]="indicatorElementNextOrderScheduled"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementRed" 
+            [icon]="indicatorElementProvider"
+            [header]="indicatorElementProviderHeader"
+            [content]="indicatorElementProviderContent"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementYellow" 
+            [icon]="indicatorElementBrand"
+            [header]="indicatorElementBrandHeader"
+            [content]="indicatorElementBrandContent"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementBlue" 
+            [icon]="indicatorElementProduct"
+            [header]="indicatorElementProductHeader"
+            [content]="indicatorElementProductContent"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementPurple" 
+            [icon]="indicatorElementMostSoldProduct"
+            [header]="indicatorElementMostSoldProductHeader"
+            [content]="indicatorElementMostSoldProductContent"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementGreen" 
+            [icon]="indicatorElementAlmostOutOfStock"
+            [header]="indicatorElementAlmostOutOfStockHeader"
+            [content]="indicatorElementAlmostOutOfStockContent"></inventario-indicator-element>
+        <inventario-indicator-element 
+            [color]="indicatorElementGrey" 
+            [icon]="indicatorElementNextOrderScheduled"
+            [header]="indicatorElementAlmostNextOrderScheduledHeader"
+            [content]="indicatorElementAlmostNextOrderScheduledContent"></inventario-indicator-element>
     </div>
     
     <div class="charts-container">

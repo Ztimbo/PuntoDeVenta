@@ -4,7 +4,15 @@ import { BrandsContainerComponent } from './content/brands/components/brands-con
 import { BrandsEditComponent } from './content/brands/components/brands-edit/brands-edit.component';
 import { BrandsListComponent } from './content/brands/components/brands-list/brands-list.component';
 import { BrandsNewComponent } from './content/brands/components/brands-new/brands-new.component';
+import { CategoriesContainerComponent } from './content/categories/components/categories-container/categories-container.component';
+import { CategoriesEditComponent } from './content/categories/components/categories-edit/categories-edit.component';
+import { CategoriesListComponent } from './content/categories/components/categories-list/categories-list.component';
+import { CategoriesNewComponent } from './content/categories/components/categories-new/categories-new.component';
 import { PrincipalDashboardComponent } from './content/dashboard/components/principal-dashboard/principal-dashboard.component';
+import { PresentationsContainerComponent } from './content/presentations/components/presentations-container/presentations-container.component';
+import { PresentationsEditComponent } from './content/presentations/components/presentations-edit/presentations-edit.component';
+import { PresentationsListComponent } from './content/presentations/components/presentations-list/presentations-list.component';
+import { PresentationsNewComponent } from './content/presentations/components/presentations-new/presentations-new.component';
 import { ProductsContainerComponent } from './content/products/components/products-container/products-container.component';
 import { ProductsEditComponent } from './content/products/components/products-edit/products-edit.component';
 import { ProductsListComponent } from './content/products/components/products-list/products-list.component';
@@ -30,6 +38,16 @@ const routes: Routes = [
     { path: '', component: ProductsListComponent },
     { path: 'nuevo', component: ProductsNewComponent },
     { path: 'editar/:productId', component: ProductsEditComponent }
+  ] },
+  { path: 'categorias', component: CategoriesContainerComponent, children: [
+    { path: '', component: CategoriesListComponent },
+    { path: 'nuevo', component: CategoriesNewComponent },
+    { path: 'editar/:categoryId', component: CategoriesEditComponent }
+  ] },
+  { path: 'presentaciones', component: PresentationsContainerComponent, children: [
+    { path: '', component: PresentationsListComponent },
+    { path: 'nuevo', component: PresentationsNewComponent },
+    { path: 'editar/:presentationId', component: PresentationsEditComponent }
   ] }
 ];
 

@@ -9,6 +9,8 @@ import { BrandsModule } from './content/brands/app.module-brands';
 import { MenuModule } from './menu/app.module-menu';
 import { ProductsModule } from './content/products/app.module-products';
 import { DashboardModule } from './content/dashboard/app.module-dashboard';
+import { CategoriesModule } from './content/categories/app.module-categories';
+import { PresentationsModule } from './content/presentations/app.module-presentations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DashboardModule } from './content/dashboard/app.module-dashboard';
     BrandsModule,
     MenuModule,
     ProductsModule,
-    DashboardModule
+    DashboardModule,
+    CategoriesModule,
+    PresentationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

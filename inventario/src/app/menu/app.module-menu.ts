@@ -3,6 +3,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { AppRoutingModule } from "../app-routing.module";
 import { CurrentUserComponent } from "./current-user/current-user.component";
 import { MenuLateralComponent } from "./menu-lateral/menu-lateral.component";
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
     declarations: [
@@ -11,7 +12,8 @@ import { MenuLateralComponent } from "./menu-lateral/menu-lateral.component";
     ],
     imports: [
         MatIconModule,
-        AppRoutingModule
+        AppRoutingModule,
+        MatExpansionModule
     ],
     exports: [
         CurrentUserComponent,
