@@ -1,0 +1,52 @@
+.sub-menu-principal {
+    box-shadow: none!important; 
+    border-radius: 0px!important; 
+    background: #27313A;
+
+    .mat-expansion-panel-header {
+        padding: 0px;
+    }
+
+    .mat-expansion-panel-header:hover {
+        background: #2a8cc0!important;
+
+        span {
+            mat-icon {
+                color: #27313A;
+            }
+
+            .mat-expansion-panel-header-title {
+                color: #27313A;
+
+                mat-icon {
+                    color: #27313A;
+                }
+            }
+        }
+    }
+
+    .mat-expansion-panel-content {
+        background: #181e24;
+
+        .mat-expansion-panel-body {
+            padding: 0px!important;
+
+            a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            a:hover {
+                background: #21719c!important;
+                color: #27313A;
+
+                mat-icon {
+                    color: #27313A;
+                }
+            }
+        }
+    }
+}

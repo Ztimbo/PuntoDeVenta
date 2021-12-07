@@ -35,6 +35,7 @@
 #dashboard-container {
     overflow-y: scroll;
     max-height: 66vh;
+    max-width: 170vh;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }

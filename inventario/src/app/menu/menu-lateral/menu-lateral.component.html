@@ -1,46 +1,53 @@
 <nav id="menu">
     <ul>
-        <li>
+        <li class="menu-item">
             <a routerLink="/">
                 <mat-icon class="menu-icons">dashboard</mat-icon>
                 Dashboard
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
             </a>
         </li>
-        <li>
-            <a routerLink="/proveedores">
-                <mat-icon class="menu-icons">assignment_ind</mat-icon>
-                Proveedores
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
-            </a>
+        <li class="menu-item-expand">
+            <mat-expansion-panel class="sub-menu-principal" hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="menu-icons">archive</mat-icon>
+                    Almacen
+                  </mat-panel-title>
+                  <mat-icon class="menu-arrow-icons">keyboard_arrow_down</mat-icon>
+                </mat-expansion-panel-header>
+                <a routerLink="/marcas">
+                    <mat-icon class="submenu-icons">copyright</mat-icon>
+                    Marcas
+                </a>
+                <a routerLink="/categorias">
+                    <mat-icon class="submenu-icons">category</mat-icon>
+                    Categorías
+                </a>
+                <a routerLink="/presentaciones">
+                    <mat-icon class="submenu-icons">local_convenience_store</mat-icon>
+                    Presentaciones
+                </a>
+                <a routerLink="/productos">
+                    <mat-icon class="submenu-icons">store</mat-icon>
+                    Productos
+                </a>
+              </mat-expansion-panel>
         </li>
-        <li>
-            <a routerLink="/marcas">
-                <mat-icon class="menu-icons">copyright</mat-icon>
-                Marcas
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
-            </a>
+        <li class="menu-item-expand">
+            <mat-expansion-panel class="sub-menu-principal" hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="menu-icons">local_shipping</mat-icon>
+                    Compras
+                  </mat-panel-title>
+                  <mat-icon class="menu-arrow-icons">keyboard_arrow_down</mat-icon>
+                </mat-expansion-panel-header>
+                <a routerLink="/proveedores">
+                    <mat-icon class="submenu-icons">assignment_ind</mat-icon>
+                    Proveedores
+                </a>
+              </mat-expansion-panel>
         </li>
-        <li>
-            <a routerLink="/productos">
-                <mat-icon class="menu-icons">store</mat-icon>
-                Productos
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/categorias">
-                <mat-icon class="menu-icons">category</mat-icon>
-                Categorías
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/presentaciones">
-                <mat-icon class="menu-icons">local_convenience_store</mat-icon>
-                Presentaciones
-                <mat-icon class="menu-arrow-icons">keyboard_arrow_right</mat-icon>
-            </a>
-        </li>
+
     </ul>
 </nav>
