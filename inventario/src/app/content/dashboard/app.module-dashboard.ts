@@ -3,9 +3,9 @@ import { NgModule } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { ChartsModule } from "ng2-charts";
 import { GlobalModule } from "src/app/global/app.module-global";
-import { BrandsService } from "../brands/services/brands.service";
-import { ProductsService } from "../products/services/products.service";
-import { ProvidersService } from "../providers/services/providers.service";
+import { BrandsService } from "../warehouse/brands/services/brands.service";
+import { ProductsService } from "../warehouse/products/services/products.service";
+import { ProvidersService } from "../purchases/providers/services/providers.service";
 import { PrincipalDashboardComponent } from "./components/principal-dashboard/principal-dashboard.component";
 
 @NgModule({

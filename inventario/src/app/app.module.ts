@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProvidersModule } from './content/providers/app.module-providers';
-import { BrandsModule } from './content/brands/app.module-brands';
+import { ProvidersModule } from './content/purchases/providers/app.module-providers';
+import { BrandsModule } from './content/warehouse/brands/app.module-brands';
 import { MenuModule } from './menu/app.module-menu';
-import { ProductsModule } from './content/products/app.module-products';
+import { ProductsModule } from './content/warehouse/products/app.module-products';
 import { DashboardModule } from './content/dashboard/app.module-dashboard';
 import { CategoriesModule } from './content/categories/app.module-categories';
-import { PresentationsModule } from './content/presentations/app.module-presentations';
+import { PresentationsModule } from './content/warehouse/presentations/app.module-presentations';
 
 @NgModule({
   declarations: [

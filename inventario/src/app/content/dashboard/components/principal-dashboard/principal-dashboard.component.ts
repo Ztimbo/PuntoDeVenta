@@ -1,10 +1,9 @@
-import { Component, OnInit, Provider } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType, RadialChartOptions } from 'chart.js';
 import { Label, MultiDataSet } from 'ng2-charts';
-import * as pluginDataLabels from 'chartjs-plugin-datalabels';
-import { ProvidersService } from 'src/app/content/providers/services/providers.service';
-import { BrandsService } from 'src/app/content/brands/services/brands.service';
-import { ProductsService } from 'src/app/content/products/services/products.service';
+import { ProvidersService } from 'src/app/content/purchases/providers/services/providers.service';
+import { BrandsService } from 'src/app/content/warehouse/brands/services/brands.service';
+import { ProductsService } from 'src/app/content/warehouse/products/services/products.service';
 
 @Component({
   selector: 'inventarios-principal-dashboard',

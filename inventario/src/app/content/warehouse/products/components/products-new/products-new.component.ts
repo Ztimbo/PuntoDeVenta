@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Brand } from 'src/app/content/brands/interfaces/brand';
-import { BrandsService } from 'src/app/content/brands/services/brands.service';
+import { Brand } from 'src/app/content/warehouse/brands/interfaces/brand';
+import { BrandsService } from 'src/app/content/warehouse/brands/services/brands.service';
 import { Category } from 'src/app/content/categories/interfaces/category';
 import { CategoriesService } from 'src/app/content/categories/services/categories.service';
-import { Presentation } from 'src/app/content/presentations/interfaces/presentation';
-import { PresentationsService } from 'src/app/content/presentations/services/presentations.service';
-import { Provider } from 'src/app/content/providers/interfaces/provider';
-import { ProvidersService } from 'src/app/content/providers/services/providers.service';
+import { Presentation } from 'src/app/content/warehouse/presentations/interfaces/presentation';
+import { PresentationsService } from 'src/app/content/warehouse/presentations/services/presentations.service';
+import { Provider } from 'src/app/content/purchases/providers/interfaces/provider';
+import { ProvidersService } from 'src/app/content/purchases/providers/services/providers.service';
 
 @Component({
   selector: 'app-products-new',
@@ -54,7 +54,7 @@ export class ProductsNewComponent implements OnInit {
   }
 
   private getPresentations(): void {
-    this.presentationsService.getPresentations().subscribe((response): void => {
+    this.presentationsService.getPresentations().subscribe((response: Presentation[]): void => {
       this.presentations = response;
     });
   }
