@@ -5,6 +5,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
 import { MatTableModule } from "@angular/material/table";
 import { AppRoutingModule } from "src/app/app-routing.module";
 import { GlobalModule } from "src/app/global/app.module-global";
@@ -31,7 +32,8 @@ import { CategoriesNewComponent } from "./components/categories-new/categories-n
         MatInputModule,
         MatFormFieldModule,
         MatCardModule,
-        GlobalModule
+        GlobalModule,
+        MatMenuModule
     ],
     exports: [
         CategoriesContainerComponent,

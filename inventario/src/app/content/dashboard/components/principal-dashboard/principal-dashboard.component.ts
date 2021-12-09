@@ -125,8 +125,6 @@ export class PrincipalDashboardComponent implements OnInit {
     this.getNumberOfProviders();
     this.getNumberOfBrands();
     this.getNumberOfProducts();
-
-    this.loadingPage.style.display = 'none';
   }
 
   public getNumberOfProviders(): void {
@@ -144,6 +142,7 @@ export class PrincipalDashboardComponent implements OnInit {
   public getNumberOfProducts(): void {
     this.productsService.getProducts().subscribe((response) => {
       this.indicatorElementProductContent = response.length.toString();
+      this.loadingPage.style.display = 'none';
     });
   }
 

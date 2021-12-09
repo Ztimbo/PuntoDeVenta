@@ -18,12 +18,17 @@
             </a>
         </th>
         <td mat-cell *matCellDef="let element" class="category-list-options-column">
-            <a routerLink="/categorias/editar/{{element.categoryId}}" class="category-list-icons category-list-icons-edit">
-                <mat-icon>edit</mat-icon>
-            </a>
-            <a (click)="openDialog()" class="category-list-icons category-list-icons-delete">
-                <mat-icon>delete</mat-icon>
-            </a>
+            <button class="options-button" mat-flat-button color="accent" [matMenuTriggerFor]="menu">
+                <mat-icon>calendar_view_day</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <a mat-menu-item routerLink="/categorias/editar/{{element.categoryId}}" class="category-list-icons category-list-icons-edit">
+                    Editar <mat-icon>edit</mat-icon>
+                </a>
+                <a mat-menu-item (click)="openDialog()" class="category-list-icons category-list-icons-delete">
+                    Eliminar <mat-icon>delete</mat-icon>
+                </a>
+            </mat-menu>
         </td>
     </ng-container>
 

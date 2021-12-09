@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { BrandsService } from './services/brands.service';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { BrandsService } from './services/brands.service';
         MatDialogModule,
         AppRoutingModule,
         GlobalModule,
-        HttpClientModule
+        HttpClientModule,
+        MatMenuModule
     ],
     exports: [
         BrandsDeleteComponent,

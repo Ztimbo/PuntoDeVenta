@@ -6,6 +6,7 @@ import { MatOptionModule } from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
 import { MatSelectModule } from "@angular/material/select";
 import { MatTableModule } from "@angular/material/table";
 import { BrowserModule } from "@angular/platform-browser";
@@ -38,7 +39,8 @@ import { ProductsService } from "./services/products.service";
         HttpClientModule,
         MatOptionModule,
         MatSelectModule,
-        BrowserModule
+        BrowserModule,
+        MatMenuModule
     ],
     exports: [
         ProductsContainerComponent,

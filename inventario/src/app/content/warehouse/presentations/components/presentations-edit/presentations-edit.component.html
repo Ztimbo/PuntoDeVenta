@@ -1,1 +1,16 @@
-<p>presentations-edit works!</p>
+<inventario-content-title [title]="title"></inventario-content-title>
+
+<mat-card class="editar-presentation-box">
+    <form class="editar-presentation-form">
+        <mat-form-field class="editar-presentation-input" appearance="outline">
+            <mat-label>presentation</mat-label>
+            <input matInput placeholder="Ej. Bayer" value="Bayer">
+        </mat-form-field>
+
+        <mat-form-field class="editar-presentation-input" appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button color="accent">Guardar</button>
+</mat-card>

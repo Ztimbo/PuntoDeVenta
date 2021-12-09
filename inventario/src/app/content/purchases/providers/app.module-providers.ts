@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
@@ -36,7 +37,8 @@ import { ProvidersService } from './services/providers.service';
         GlobalModule,
         HttpClientModule,
         MatSortModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatMenuModule
     ],
     exports: [
         ProvidersNewComponent,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-presentations-delete',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationsDeleteComponent implements OnInit {
 
-  constructor() { }
+  public title: string = "Eliminar Presentación";
+
+  constructor(public dialogRef: MatDialogRef<PresentationsDeleteComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

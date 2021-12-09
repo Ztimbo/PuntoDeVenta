@@ -1,0 +1,13 @@
+.nueva-presentation-box {
+    display: grid;
+    grid-template-rows: 1fr, 2fr;
+    width: 30%;
+
+    button {
+        width: 50%;
+    }
+}
+
+.nueva-presentation-input {
+    width: 100%;
+}

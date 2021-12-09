@@ -14,12 +14,18 @@
 }
 
 .providers-list-icons-edit {
-    color: #007AAE;
+    mat-icon {
+        color: #007AAE;
+        padding-bottom: 3px;
+    }
 }
 
 .providers-list-icons-delete {
-    color: #D63737;
-    cursor: pointer;   
+    mat-icon {
+        color: #D63737;
+        cursor: pointer;
+        padding-bottom: 3px;
+    } 
 }
 
 .providers-list-icons-new {
@@ -28,4 +34,9 @@
 
 .providers-list-options-column {
     text-align: end;
+}
+
+.options-button {
+    padding: 0px;
+    min-width: 35px;
 }
