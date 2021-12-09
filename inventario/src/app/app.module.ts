@@ -11,6 +11,8 @@ import { ProductsModule } from './content/warehouse/products/app.module-products
 import { DashboardModule } from './content/dashboard/app.module-dashboard';
 import { CategoriesModule } from './content/categories/app.module-categories';
 import { PresentationsModule } from './content/warehouse/presentations/app.module-presentations';
+import { PurchasesModule } from './content/purchases/purchases/app.module-purchases';
+import { SalesModule } from './content/sales/app.module-sales';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PresentationsModule } from './content/warehouse/presentations/app.modul
     ProductsModule,
     DashboardModule,
     CategoriesModule,
-    PresentationsModule
+    PresentationsModule,
+    PurchasesModule,
+    SalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
