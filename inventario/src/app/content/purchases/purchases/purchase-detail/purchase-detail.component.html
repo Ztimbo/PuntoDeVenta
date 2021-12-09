@@ -1,0 +1,82 @@
+<inventario-content-title [title]="title"></inventario-content-title>
+
+<mat-card class="purchase-detail-container">
+    <mat-form-field appearance="outline">
+        <mat-label>Proveedor</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let provider of providers">
+            {{provider.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Buscar Producto</mat-label>
+        <input matInput 
+            [formControl]="myControl" 
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+        </mat-autocomplete>
+        <mat-icon matSuffix>search</mat-icon>
+        
+    </mat-form-field>
+
+    <div class="table-container">
+        <table mat-table #detailsTable detailsTable [dataSource]="dataSource" class="mat-elevation-z8 order-detail-table">
+
+            <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+            
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+            
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            
+            <!-- Weight Column -->
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                <td mat-cell *matCellDef="let element; let indexOfelement=index;">
+                    <button mat-button style="padding: 0px;" (click)="incrementQuantity(indexOfelement)">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                    <mat-form-field class="quantity-purchase-order-input" appearance="outline">
+                        <input matInput readonly value="{{element.quantity}} ">
+                    </mat-form-field>
+                    <button mat-button style="padding: 0px;" (click)="decrementQuantity(indexOfelement)">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+            
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Precio </th>
+                <td mat-cell *matCellDef="let element"> ${{element.price}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="-">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element; let indexOfelement=index;">
+                    <a (click)="removeItem(indexOfelement)">
+                        <mat-icon>delete</mat-icon> 
+                    </a> 
+                </td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    
+      
+</mat-card>

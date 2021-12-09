@@ -15,18 +15,32 @@
             "email": "provider2@email.com"
         },
         {
-            "providerId": 1,
+            "providerId": 3,
             "name": "Provider 3",
             "description": "",
             "phoneNumber": 11111111111,
             "email": "provider3@email.com"
         },
         {
-            "providerId": 1,
+            "providerId": 4,
             "name": "Provider 4",
             "description": "",
             "phoneNumber": 11111111111,
             "email": "provider4@email.com"
+        },
+        {
+            "providerId": 5,
+            "name": "Provider 5",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider5@email.com"
+        },
+        {
+            "providerId": 6,
+            "name": "Provider 6",
+            "description": "",
+            "phoneNumber": 11111111111,
+            "email": "provider6@email.com"
         }
     ],
     "brands": [

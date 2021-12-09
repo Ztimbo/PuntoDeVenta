@@ -21,6 +21,8 @@ import { ProvidersContainerComponent } from './content/purchases/providers/compo
 import { ProvidersEditComponent } from './content/purchases/providers/components/providers-edit/providers-edit.component';
 import { ProvidersListComponent } from './content/purchases/providers/components/providers-list/providers-list.component';
 import { ProvidersNewComponent } from './content/purchases/providers/components/providers-new/providers-new.component';
+import { PurchasesContainerComponent } from './content/purchases/purchases/purchases-container/purchases-container.component';
+import { SalesContainerComponent } from './content/sales/sales-container/sales-container.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalDashboardComponent },
@@ -48,7 +50,9 @@ const routes: Routes = [
     { path: '', component: PresentationsListComponent },
     { path: 'nuevo', component: PresentationsNewComponent },
     { path: 'editar/:presentationId', component: PresentationsEditComponent }
-  ] }
+  ] },
+  { path: 'compras', component: PurchasesContainerComponent },
+  { path: 'ventas', component: SalesContainerComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,21 @@
+.quantity-purchase-order-input {
+    width: 20%;
+    margin-left: 5px; 
+    margin-right: 5px;
+
+    .mat-form-field-wrapper {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}
+
+.order-detail-table {
+    thead {
+        tr {
+            th {
+                width: 20%;
+            }
+        }
+    }
+}

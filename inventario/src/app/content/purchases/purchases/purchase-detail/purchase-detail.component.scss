@@ -1,0 +1,18 @@
+.purchase-detail-container {
+    width: 80%;
+    max-height: 60vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr;
+}
+
+.table-container {
+    max-height: 80vh;
+    max-width: 100%;
+    overflow: auto;
+    border: 1px solid grey;
+
+    table {
+        width: 100%;
+        box-shadow: none;
+    }
+}

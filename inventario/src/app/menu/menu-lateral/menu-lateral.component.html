@@ -1,4 +1,4 @@
-<nav id="menu">
+<nav id="menu" style="overflow-y: auto;">
     <ul>
         <li class="menu-item">
             <a routerLink="/">
@@ -46,8 +46,17 @@
                     <mat-icon class="submenu-icons">assignment_ind</mat-icon>
                     Proveedores
                 </a>
+                <a routerLink="/compras">
+                    <mat-icon class="submenu-icons">add_shopping_cart</mat-icon>
+                    Compras
+                </a>
               </mat-expansion-panel>
         </li>
-
+        <li class="menu-item">
+            <a routerLink="/ventas">
+                <mat-icon class="menu-icons">shopping_cart</mat-icon>
+                Ventas
+            </a>
+        </li>
     </ul>
 </nav>
