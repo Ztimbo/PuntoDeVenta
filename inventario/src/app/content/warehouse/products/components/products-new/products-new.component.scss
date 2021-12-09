@@ -6,6 +6,12 @@
     button {
         width: 50%;
     }
+
+    .nuevo-producto-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
 }
 
 .nuevo-producto-input {

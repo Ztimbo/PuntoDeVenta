@@ -6,6 +6,12 @@
     button {
         width: 50%;
     }
+
+    .editar-producto-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
 }
 
 .editar-producto-input {
