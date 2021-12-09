@@ -1,0 +1,33 @@
+.error-snack-bar {
+    background: red;
+    color: white;
+
+    div {
+        div {
+            .mat-simple-snackbar {
+                .mat-simple-snackbar-action {
+                    button {
+                        background: #424242;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info-snack-bar {
+    background: #206D97;
+    color: white;
+
+    div {
+        div {
+            .mat-simple-snackbar {
+                .mat-simple-snackbar-action {
+                    button {
+                        background: #424242;
+                    }
+                }
+            }
+        }
+    }
+}

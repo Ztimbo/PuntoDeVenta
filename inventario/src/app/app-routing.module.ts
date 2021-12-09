@@ -4,10 +4,10 @@ import { BrandsContainerComponent } from './content/warehouse/brands/components/
 import { BrandsEditComponent } from './content/warehouse/brands/components/brands-edit/brands-edit.component';
 import { BrandsListComponent } from './content/warehouse/brands/components/brands-list/brands-list.component';
 import { BrandsNewComponent } from './content/warehouse/brands/components/brands-new/brands-new.component';
-import { CategoriesContainerComponent } from './content/categories/components/categories-container/categories-container.component';
-import { CategoriesEditComponent } from './content/categories/components/categories-edit/categories-edit.component';
-import { CategoriesListComponent } from './content/categories/components/categories-list/categories-list.component';
-import { CategoriesNewComponent } from './content/categories/components/categories-new/categories-new.component';
+import { CategoriesContainerComponent } from './content/warehouse/categories/components/categories-container/categories-container.component';
+import { CategoriesEditComponent } from './content/warehouse/categories/components/categories-edit/categories-edit.component';
+import { CategoriesListComponent } from './content/warehouse/categories/components/categories-list/categories-list.component';
+import { CategoriesNewComponent } from './content/warehouse/categories/components/categories-new/categories-new.component';
 import { PrincipalDashboardComponent } from './content/dashboard/components/principal-dashboard/principal-dashboard.component';
 import { PresentationsContainerComponent } from './content/warehouse/presentations/components/presentations-container/presentations-container.component';
 import { PresentationsEditComponent } from './content/warehouse/presentations/components/presentations-edit/presentations-edit.component';
@@ -21,8 +21,10 @@ import { ProvidersContainerComponent } from './content/purchases/providers/compo
 import { ProvidersEditComponent } from './content/purchases/providers/components/providers-edit/providers-edit.component';
 import { ProvidersListComponent } from './content/purchases/providers/components/providers-list/providers-list.component';
 import { ProvidersNewComponent } from './content/purchases/providers/components/providers-new/providers-new.component';
-import { PurchasesContainerComponent } from './content/purchases/purchases/purchases-container/purchases-container.component';
-import { SalesContainerComponent } from './content/sales/sales-container/sales-container.component';
+import { PurchasesContainerComponent } from './content/purchases/purchases/components/purchases-container/purchases-container.component';
+import { SalesContainerComponent } from './content/sales/components/sales-container/sales-container.component';
+import { PurchasesListComponent } from './content/purchases/purchases/components/purchases-list/purchases-list.component';
+import { PurchaseNewContainerComponent } from './content/purchases/purchases/components/purchases-new/purchase-new-container/purchase-new-container.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalDashboardComponent },
@@ -51,7 +53,10 @@ const routes: Routes = [
     { path: 'nuevo', component: PresentationsNewComponent },
     { path: 'editar/:presentationId', component: PresentationsEditComponent }
   ] },
-  { path: 'compras', component: PurchasesContainerComponent },
+  { path: 'compras', component: PurchasesContainerComponent, children: [
+    { path: '', component: PurchasesListComponent },
+    { path: 'nuevo', component: PurchaseNewContainerComponent }
+  ] },
   { path: 'ventas', component: SalesContainerComponent }
 ];
 

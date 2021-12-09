@@ -7,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchasesContainerComponent implements OnInit {
 
-  public total: number = 0;
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  public printData($eventData: any): void {
-    this.total = $eventData;
   }
 
 }

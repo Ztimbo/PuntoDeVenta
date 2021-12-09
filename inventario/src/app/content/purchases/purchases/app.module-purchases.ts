@@ -8,17 +8,26 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatTableModule } from "@angular/material/table";
 import { BrowserModule } from "@angular/platform-browser";
 import { GlobalModule } from "src/app/global/app.module-global";
-import { PurchaseCalcComponent } from "./purchase-calc/purchase-calc.component";
-import { PurchaseDetailComponent } from "./purchase-detail/purchase-detail.component";
-import { PurchasesContainerComponent } from "./purchases-container/purchases-container.component";
+import { PurchaseCalcComponent } from "./components/purchases-new/purchase-calc/purchase-calc.component";
+import { PurchaseDetailComponent } from "./components/purchases-new/purchase-detail/purchase-detail.component";
+import { PurchasesContainerComponent } from "./components/purchases-container/purchases-container.component";
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatButtonModule } from "@angular/material/button";
+import { PurchasesListComponent } from "./components/purchases-list/purchases-list.component";
+import { PurchasesDetailComponent } from "./components/purchases-detail/purchases-detail.component";
+import { PurchaseNewContainerComponent } from "./components/purchases-new/purchase-new-container/purchase-new-container.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
         PurchasesContainerComponent,
         PurchaseCalcComponent,
-        PurchaseDetailComponent
+        PurchaseDetailComponent,
+        PurchasesListComponent,
+        PurchasesDetailComponent,
+        PurchaseNewContainerComponent
     ],
     imports: [
         GlobalModule,
@@ -32,12 +41,18 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
         MatTableModule,
         MatAutocompleteModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        MatSnackBarModule,
+        MatButtonModule,
+        RouterModule
     ],
     exports: [
         PurchasesContainerComponent,
         PurchaseCalcComponent,
-        PurchaseDetailComponent
+        PurchaseDetailComponent,
+        PurchasesListComponent,
+        PurchasesDetailComponent,
+        PurchaseNewContainerComponent
     ]
 })
 export class PurchasesModule {}

@@ -13,6 +13,8 @@ export class CategoriesListComponent implements OnInit {
 
   public title: string = "Categorías";
 
+  public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+
   public displayedColumns: string[] = ['name', 'description', '-'];
   public dataSource: Category[] = [];
 
@@ -28,12 +30,14 @@ export class CategoriesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
     this.getBrands();
   }
 
   public getBrands(): void {
     this.categoryService.getCategories().subscribe((response: Category[]) => {
       this.dataSource = response;
+      this.loadingPage.style.display = 'none';
     });
   }
 

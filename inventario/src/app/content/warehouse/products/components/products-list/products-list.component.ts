@@ -13,6 +13,8 @@ export class ProductsListComponent implements OnInit {
 
   public title: string = "Productos";
 
+  public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+
   public displayedColumns: string[] = ['name', 'description', 'priceBuy', 'priceSell', 'brand', 'provider', 'category', 'presentation', 'barCode', '-'];
   public dataSource: Product[] = [];
 
@@ -22,6 +24,7 @@ export class ProductsListComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
     this.getProducts();
   }
 
@@ -34,6 +37,7 @@ export class ProductsListComponent implements OnInit {
   public getProducts(): void {
     this.productsService.getProducts().subscribe((response: Product[]) => {
       this.dataSource = response;
+      this.loadingPage.style.display = 'none';
     });
   }
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Brand } from 'src/app/content/warehouse/brands/interfaces/brand';
 import { BrandsService } from 'src/app/content/warehouse/brands/services/brands.service';
-import { Category } from 'src/app/content/categories/interfaces/category';
-import { CategoriesService } from 'src/app/content/categories/services/categories.service';
+import { Category } from 'src/app/content/warehouse/categories/interfaces/category';
+import { CategoriesService } from 'src/app/content/warehouse/categories/services/categories.service';
 import { Presentation } from 'src/app/content/warehouse/presentations/interfaces/presentation';
 import { PresentationsService } from 'src/app/content/warehouse/presentations/services/presentations.service';
 import { Provider } from 'src/app/content/purchases/providers/interfaces/provider';

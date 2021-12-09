@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { SalesContainerComponent } from "./sales-container/sales-container.component";
+import { SalesContainerComponent } from "./components/sales-container/sales-container.component";
 
 @NgModule({
     declarations: [

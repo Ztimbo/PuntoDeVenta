@@ -14,6 +14,8 @@ export class PrincipalDashboardComponent implements OnInit {
 
   public title: string = "Información General";
 
+  public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+
   public indicatorElementRed: string = 'red';
   public indicatorElementYellow: string = 'yellow';
   public indicatorElementBlue: string = 'blue';
@@ -118,9 +120,13 @@ export class PrincipalDashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loadingPage.style.display = 'grid';
+    
     this.getNumberOfProviders();
     this.getNumberOfBrands();
     this.getNumberOfProducts();
+
+    this.loadingPage.style.display = 'none';
   }
 
   public getNumberOfProviders(): void {

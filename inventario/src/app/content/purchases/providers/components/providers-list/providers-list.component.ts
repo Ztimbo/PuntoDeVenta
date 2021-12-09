@@ -15,6 +15,8 @@ export class ProvidersListComponent implements OnInit {
 
   public title: string = "Proveedores";
 
+  public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+
   public displayedColumns: string[] = ['name', 'description', 'phoneNumber', 'email', '-'];
   public dataSource: any = [];
 
@@ -32,6 +34,7 @@ export class ProvidersListComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
     this.getArray();
     //this.getProviders();
   }
@@ -93,6 +96,8 @@ export class ProvidersListComponent implements OnInit {
         this.array = response;
         this.totalSize = this.array.length;
         this.iterator();
+
+        this.loadingPage.style.display = 'none';
       });
   }
 

@@ -9,10 +9,11 @@ import { BrandsModule } from './content/warehouse/brands/app.module-brands';
 import { MenuModule } from './menu/app.module-menu';
 import { ProductsModule } from './content/warehouse/products/app.module-products';
 import { DashboardModule } from './content/dashboard/app.module-dashboard';
-import { CategoriesModule } from './content/categories/app.module-categories';
+import { CategoriesModule } from './content/warehouse/categories/app.module-categories';
 import { PresentationsModule } from './content/warehouse/presentations/app.module-presentations';
 import { PurchasesModule } from './content/purchases/purchases/app.module-purchases';
 import { SalesModule } from './content/sales/app.module-sales';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SalesModule } from './content/sales/app.module-sales';
     CategoriesModule,
     PresentationsModule,
     PurchasesModule,
-    SalesModule
+    SalesModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
