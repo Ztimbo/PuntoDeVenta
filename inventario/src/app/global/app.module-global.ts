@@ -4,6 +4,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { ContentTitleComponent } from "./content-title/content-title.component";
 import { IndicatorElementComponent } from "./indicator-element/indicator-element.component";
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
     declarations: [

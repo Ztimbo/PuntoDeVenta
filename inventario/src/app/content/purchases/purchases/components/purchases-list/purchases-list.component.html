@@ -1,1 +1,50 @@
 <inventario-content-title [title]="title"></inventario-content-title>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 purchases-table">
+    <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="orderDate">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderDate}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total </th>
+        <td mat-cell *matCellDef="let element"> ${{element.total}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+            <span class="purchase-status" 
+                [ngClass]="[element.status == 'completa' ? 'purchase-status-completed': 
+                            element.status == 'en camino'? 'purchase-status-in-transit':
+                            element.status == 'cancelada' ? 'purchase-status-canceled': '']" >
+                {{element.status | uppercase}}</span>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="-">
+        <th mat-header-cell *matHeaderCellDef class="purchases-header-cell">
+            <a routerLink="/compras/nuevo" class="purchase-list-icons purchase-list-icons-new">
+                <mat-icon>add_box</mat-icon>
+            </a>
+        </th>
+        <td mat-cell *matCellDef="let element" class="purchase-list-options-column">
+            <button class="options-button" mat-flat-button color="accent" [matMenuTriggerFor]="menu">
+                <mat-icon>calendar_view_day</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <a mat-menu-item routerLink="/compras/detalle/{{element.orderId}}" class="purchase-list-icons purchase-list-icons-edit">
+                    Detalles <mat-icon>details</mat-icon>
+                </a>
+            </mat-menu>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

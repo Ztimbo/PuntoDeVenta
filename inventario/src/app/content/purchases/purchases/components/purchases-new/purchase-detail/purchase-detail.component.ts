@@ -27,8 +27,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class PurchaseDetailComponent implements OnInit {
 
-  public title: string = "Detalle de Compra";
-
   public filteredOptions: Observable<string[]> | undefined;
   public myControl: FormControl = new FormControl();
 

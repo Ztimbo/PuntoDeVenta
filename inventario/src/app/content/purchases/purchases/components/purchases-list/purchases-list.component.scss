@@ -1,0 +1,60 @@
+.purchases-table {
+    width: 100%;
+}
+
+.purchases-header-cell {
+    text-align: right;
+}
+
+.purchase-list-icons {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.purchase-list-icons-edit {
+    mat-icon {
+        color: #007AAE;
+        padding-bottom: 5px;
+    }
+}
+
+.purchase-list-icons-delete {
+    mat-icon {
+        color: #D63737;
+        cursor: pointer;
+        padding-bottom: 3px;
+    }
+}
+
+.purchase-list-icons-new {
+    color: #11ac02;
+}
+
+.purchase-list-options-column {
+    text-align: end;
+}
+
+.options-button {
+    padding: 0px;
+    min-width: 35px;
+}
+
+.purchase-status {
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+}
+
+.purchase-status-completed {
+    background: green;
+}
+
+.purchase-status-in-transit {
+    background: rgb(212, 193, 25);
+}
+
+.purchase-status-canceled {
+    background: red;
+}

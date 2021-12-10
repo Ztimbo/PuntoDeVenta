@@ -25,6 +25,7 @@ import { PurchasesContainerComponent } from './content/purchases/purchases/compo
 import { SalesContainerComponent } from './content/sales/components/sales-container/sales-container.component';
 import { PurchasesListComponent } from './content/purchases/purchases/components/purchases-list/purchases-list.component';
 import { PurchaseNewContainerComponent } from './content/purchases/purchases/components/purchases-new/purchase-new-container/purchase-new-container.component';
+import { PurchasesDetailComponent } from './content/purchases/purchases/components/purchases-detail/purchases-detail.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalDashboardComponent },
@@ -55,7 +56,8 @@ const routes: Routes = [
   ] },
   { path: 'compras', component: PurchasesContainerComponent, children: [
     { path: '', component: PurchasesListComponent },
-    { path: 'nuevo', component: PurchaseNewContainerComponent }
+    { path: 'nuevo', component: PurchaseNewContainerComponent },
+    { path: 'detalle/:purchaseId', component: PurchasesDetailComponent }
   ] },
   { path: 'ventas', component: SalesContainerComponent }
 ];

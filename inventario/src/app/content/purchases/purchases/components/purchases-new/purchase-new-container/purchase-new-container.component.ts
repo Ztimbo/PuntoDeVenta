@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchaseNewContainerComponent implements OnInit {
 
+  public title: string = "Detalle de Compra";
   public total: number = 0;
 
   constructor() { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Purchase } from '../../interfaces/purchase';
 import { PurchasesService } from '../../services/purchases.service';
 
@@ -11,19 +12,25 @@ export class PurchasesListComponent implements OnInit {
 
   public title: string = "Compras";
 
-  public purchases: Purchase[] = [];
+  public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+
+  public displayedColumns: string[] = ['orderId', 'orderDate', 'total', 'status', '-'];
+  public dataSource: Purchase[] = [];
 
   constructor(
+    public dialog: MatDialog,
     private readonly purchasesService: PurchasesService
   ) { }
 
   ngOnInit(): void {
+    if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
     this.getPurchases();
   }
 
   private getPurchases(): void {
     this.purchasesService.getPurchases().subscribe((response: Purchase[]) => {
-      this.purchases = response;
+      this.dataSource = response;
+      this.loadingPage.style.display = 'none';
     });
   }
 

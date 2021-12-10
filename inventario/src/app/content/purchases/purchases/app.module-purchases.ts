@@ -18,7 +18,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { PurchasesListComponent } from "./components/purchases-list/purchases-list.component";
 import { PurchasesDetailComponent } from "./components/purchases-detail/purchases-detail.component";
 import { PurchaseNewContainerComponent } from "./components/purchases-new/purchase-new-container/purchase-new-container.component";
-import { RouterModule } from "@angular/router";
+import { MatMenuModule } from "@angular/material/menu";
+import { AppRoutingModule } from "src/app/app-routing.module";
 
 @NgModule({
     declarations: [
@@ -44,7 +45,8 @@ import { RouterModule } from "@angular/router";
         FormsModule,
         MatSnackBarModule,
         MatButtonModule,
-        RouterModule
+        MatMenuModule,
+        AppRoutingModule
     ],
     exports: [
         PurchasesContainerComponent,
