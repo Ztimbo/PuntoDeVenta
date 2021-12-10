@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
 import { PrincipalDashboardComponent } from './principal-dashboard.component';
 
@@ -8,7 +9,8 @@ describe('PrincipalDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrincipalDashboardComponent ]
+      declarations: [ PrincipalDashboardComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   });

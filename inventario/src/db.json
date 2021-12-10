@@ -151,7 +151,7 @@
             "barCode": "CODIGODEBARRAS"
         }
     ],
-    "orders": [
+    "purchases": [
         {
             "orderId": 1,
             "orderDate": "12/12/2021",

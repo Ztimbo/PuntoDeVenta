@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Purchase } from '../../interfaces/purchase';
+import { PurchasesService } from '../../services/purchases.service';
 
 @Component({
   selector: 'app-purchases-list',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchasesListComponent implements OnInit {
 
-  constructor() { }
+  public title: string = "Compras";
+
+  public purchases: Purchase[] = [];
+
+  constructor(
+    private readonly purchasesService: PurchasesService
+  ) { }
 
   ngOnInit(): void {
+    this.getPurchases();
+  }
+
+  private getPurchases(): void {
+    this.purchasesService.getPurchases().subscribe((response: Purchase[]) => {
+      this.purchases = response;
+    });
   }
 
 }
