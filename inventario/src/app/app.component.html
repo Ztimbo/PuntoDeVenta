@@ -1,15 +1,21 @@
 <div id="website">
   <div id="logo">
-    <h2>Inventario</h2>
+    <h2>[LOGO]</h2>
+    <!--<img src="../assets/942.png" style="width: 100%; height: 100%;" >-->
   </div>
   <div id="empty-bar">
-
+    <a routerLink="/">
+      <mat-icon>settings</mat-icon>
+    </a>
   </div>
   <div id="usuario-actual">
     <inventario-current-user id="usuario-actual-container"></inventario-current-user>
   </div>
   <div id="menu-lateral">
     <inventario-menu-lateral></inventario-menu-lateral>
+  </div>
+  <div id="options-logout">
+    <inventario-logout-options></inventario-logout-options>
   </div>
   <div id="content">
     <div id="loading-screen">

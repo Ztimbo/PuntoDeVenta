@@ -26,6 +26,8 @@ import { SalesContainerComponent } from './content/sales/components/sales-contai
 import { PurchasesListComponent } from './content/purchases/purchases/components/purchases-list/purchases-list.component';
 import { PurchaseNewContainerComponent } from './content/purchases/purchases/components/purchases-new/purchase-new-container/purchase-new-container.component';
 import { PurchasesDetailComponent } from './content/purchases/purchases/components/purchases-detail/purchases-detail.component';
+import { InventoryContainerComponent } from './content/warehouse/inventory/components/inventory-container/inventory-container.component';
+import { InventoryListComponent } from './content/warehouse/inventory/components/inventory-list/inventory-list.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalDashboardComponent },
@@ -54,6 +56,11 @@ const routes: Routes = [
     { path: 'nuevo', component: PresentationsNewComponent },
     { path: 'editar/:presentationId', component: PresentationsEditComponent }
   ] },
+  {
+    path: 'inventario', component: InventoryContainerComponent, children: [
+      { path: '', component: InventoryListComponent }
+    ]
+  },
   { path: 'compras', component: PurchasesContainerComponent, children: [
     { path: '', component: PurchasesListComponent },
     { path: 'nuevo', component: PurchaseNewContainerComponent },

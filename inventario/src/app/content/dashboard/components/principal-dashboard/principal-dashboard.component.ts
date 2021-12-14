@@ -12,41 +12,41 @@ import { ProductsService } from 'src/app/content/warehouse/products/services/pro
 })
 export class PrincipalDashboardComponent implements OnInit {
 
-  public title: string = "Información General";
+  public title = "Información General";
 
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
 
-  public indicatorElementRed: string = 'red';
-  public indicatorElementYellow: string = 'yellow';
-  public indicatorElementBlue: string = 'blue';
-  public indicatorElementPurple: string = 'purple';
-  public indicatorElementGreen: string = 'green';
-  public indicatorElementGrey: string = 'grey';
+  public indicatorElementRed = 'red';
+  public indicatorElementYellow = 'yellow';
+  public indicatorElementBlue = 'blue';
+  public indicatorElementPurple = 'purple';
+  public indicatorElementGreen = 'green';
+  public indicatorElementGrey = 'grey';
 
-  public indicatorElementProvider: string = 'local_shipping';
-  public indicatorElementBrand: string = 'style';
-  public indicatorElementProduct: string = 'shopping_basket';
-  public indicatorElementMostSoldProduct: string = 'stars';
-  public indicatorElementAlmostOutOfStock: string ='warning';
-  public indicatorElementNextOrderScheduled: string ='schedule';
+  public indicatorElementProvider = 'local_shipping';
+  public indicatorElementBrand = 'style';
+  public indicatorElementProduct = 'shopping_basket';
+  public indicatorElementMostSoldProduct = 'stars';
+  public indicatorElementAlmostOutOfStock ='warning';
+  public indicatorElementNextOrderScheduled ='schedule';
 
-  public indicatorElementProviderHeader: string = 'Proveedores';
-  public indicatorElementProviderContent: string = '';
+  public indicatorElementProviderHeader = 'Proveedores';
+  public indicatorElementProviderContent = '';
 
-  public indicatorElementBrandHeader: string = 'Marcas';
-  public indicatorElementBrandContent: string = '';
+  public indicatorElementBrandHeader = 'Marcas';
+  public indicatorElementBrandContent = '';
 
-  public indicatorElementProductHeader: string = 'Productos';
-  public indicatorElementProductContent: string = '';
+  public indicatorElementProductHeader = 'Productos';
+  public indicatorElementProductContent = '';
 
-  public indicatorElementMostSoldProductHeader: string = 'Más Vendido';
-  public indicatorElementMostSoldProductContent: string = 'Paracetamol';
+  public indicatorElementMostSoldProductHeader = 'Más Vendido';
+  public indicatorElementMostSoldProductContent = 'Paracetamol';
 
-  public indicatorElementAlmostOutOfStockHeader: string = 'Por Terminar';
-  public indicatorElementAlmostOutOfStockContent: string = 'Aspirina';
+  public indicatorElementAlmostOutOfStockHeader = 'Por Terminar';
+  public indicatorElementAlmostOutOfStockContent = 'Aspirina';
 
-  public indicatorElementAlmostNextOrderScheduledHeader: string = 'Prox. Entrega';
-  public indicatorElementAlmostNextOrderScheduledContent: string = '15/02/2022';
+  public indicatorElementAlmostNextOrderScheduledHeader = 'Prox. Entrega';
+  public indicatorElementAlmostNextOrderScheduledContent = '15/02/2022';
 
   //Line chart start
   public lineChartData: ChartDataSets[] = [

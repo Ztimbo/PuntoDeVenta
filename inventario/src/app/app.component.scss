@@ -23,6 +23,25 @@
         grid-column: 2 / 8;
         grid-row: 1 / 2;
         background: #384651;
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        a {
+            grid-column: 12 / 13;
+            color: white;
+            text-decoration: none;
+            font-size: 38px;
+            padding-top: 15%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            mat-icon {
+                font-size: 38px;
+            }
+        }
     }
     
     #usuario-actual {
@@ -41,8 +60,14 @@
 
     #menu-lateral {
         grid-column: 1 / 2;
-        grid-row: 3 / 11;
+        grid-row: 3 / 10;
         background: #27313A;
+    }
+
+    #options-logout {
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
+        background: #374552;
     }
     
     #content {

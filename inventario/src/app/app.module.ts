@@ -14,6 +14,8 @@ import { PresentationsModule } from './content/warehouse/presentations/app.modul
 import { PurchasesModule } from './content/purchases/purchases/app.module-purchases';
 import { SalesModule } from './content/sales/app.module-sales';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { InventoryModule } from './content/warehouse/inventory/app.module-inventory';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     PresentationsModule,
     PurchasesModule,
     SalesModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    InventoryModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
