@@ -79,14 +79,14 @@
   ],
   "presentations": [
     {
-      "presentationId": 1,
+      "id": 1,
       "name": "Presentación 1",
-      "description": ""
+      "description": "Desc"
     },
     {
-      "presentationId": 2,
-      "name": "Presentación 2",
-      "description": ""
+      "id": 2,
+      "name": "Presentación 2 tds",
+      "description": "sss"
     }
   ],
   "products": [

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 import { Presentation } from '../../interfaces/presentation';
 import { PresentationsService } from '../../services/presentations.service';
 import { PresentationsDeleteComponent } from '../presentations-delete/presentations-delete.component';
@@ -14,6 +15,7 @@ export class PresentationsListComponent implements OnInit {
   public title: string = "Presentaciones";
 
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+  @ViewChild('presentationsTable') detailsTable: MatTable<Presentation> | undefined;
 
   public displayedColumns: string[] = ['name', 'description', '-'];
   public dataSource: Presentation[] = [];
@@ -23,9 +25,13 @@ export class PresentationsListComponent implements OnInit {
     public readonly presentationsService: PresentationsService
   ) { }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(PresentationsDeleteComponent, {
       width: '250px',
+      data: { presentationId: id }
+    }).afterClosed().subscribe(() => {
+      this.getPresentations();
+      this.detailsTable?.renderRows();
     });
   }
 

@@ -1,6 +1,6 @@
 <inventario-content-title [title]="title"></inventario-content-title>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 presentations-table">
+<table mat-table #presentationsTable [dataSource]="dataSource" class="mat-elevation-z8 presentations-table">
     <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Nombre </th>
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
@@ -22,10 +22,10 @@
                 <mat-icon>calendar_view_day</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-                <a mat-menu-item routerLink="/presentaciones/editar/{{element.presentationId}}" class="presentation-list-icons presentation-list-icons-edit">
+                <a mat-menu-item routerLink="/presentaciones/editar/{{element.id}}" class="presentation-list-icons presentation-list-icons-edit">
                     Editar <mat-icon>edit</mat-icon>
                 </a>
-                <a mat-menu-item (click)="openDialog()" class="presentation-list-icons presentation-list-icons-delete">
+                <a mat-menu-item (click)="openDialog(element.id)" class="presentation-list-icons presentation-list-icons-delete">
                     Eliminar <mat-icon>delete</mat-icon>
                 </a>
             </mat-menu>
