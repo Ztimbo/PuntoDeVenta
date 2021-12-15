@@ -17,4 +17,24 @@ export class BrandsService {
     const url: string = environment.API_JSON_SERVER_URL + '/brands';
     return this._httpClient.get<Brand[]>(url);
   }
+
+  public getBrand(brandId: number): Observable<Brand> {
+    const url: string = environment.API_JSON_SERVER_URL + '/brands/' + brandId;
+    return this._httpClient.get<Brand>(url);
+  }
+
+  public saveBrand(brand: Brand): Observable<Brand> {
+    const url: string = environment.API_JSON_SERVER_URL + '/brands';
+    return this._httpClient.post<Brand>(url, brand);
+  }
+
+  public updateBrand(brand: Brand): Observable<Brand> {
+    const url: string = environment.API_JSON_SERVER_URL + '/brands/' + brand.id;
+    return this._httpClient.patch<Brand>(url, brand);
+  }
+
+  public deleteBrand(brandId: number): Observable<Brand> {
+    const url: string = environment.API_JSON_SERVER_URL + '/brands/' + brandId;
+    return this._httpClient.delete<Brand>(url);
+  }
 }

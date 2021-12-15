@@ -15,10 +15,7 @@ export interface PeriodicElement {
   price: number;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'Aspirina', quantity: 1, price: 30},
-  {name: 'Omeprazol', quantity: 1, price: 20}
-];
+const ELEMENT_DATA: PeriodicElement[] = [];
 
 @Component({
   selector: 'inventario-purchase-detail',

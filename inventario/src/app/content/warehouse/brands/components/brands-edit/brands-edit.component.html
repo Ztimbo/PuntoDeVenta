@@ -1,16 +1,17 @@
 <inventario-content-title [title]="title"></inventario-content-title>
 
 <mat-card class="nueva-marca-box">
-    <form class="nueva-marca-form">
+    <form class="nueva-marca-form" [formGroup]="editBrand">
         <mat-form-field class="nueva-marca-input" appearance="outline">
             <mat-label>Marca</mat-label>
-            <input matInput placeholder="Ej. Bayer" value="Bayer">
+            <input matInput placeholder="Ej. Bayer" formControlName="marca">
+            <mat-error *ngIf="editBrand.get('marca')?.hasError('required')">El campo marca es obligatorio</mat-error>
         </mat-form-field>
 
         <mat-form-field class="nueva-marca-input" appearance="outline">
             <mat-label>Descripción</mat-label>
-            <input matInput>
+            <input matInput formControlName="descripcion">
         </mat-form-field>
     </form>
-    <button mat-raised-button color="accent">Guardar</button>
+    <button mat-raised-button color="accent" type="submit" (click)="onSubmit()">Guardar</button>
 </mat-card>

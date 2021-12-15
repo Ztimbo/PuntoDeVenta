@@ -16,6 +16,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { BrandsService } from './services/brands.service';
 import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -36,7 +39,10 @@ import { MatMenuModule } from '@angular/material/menu';
         AppRoutingModule,
         GlobalModule,
         HttpClientModule,
-        MatMenuModule
+        MatMenuModule,
+        ReactiveFormsModule,
+        CommonModule,
+        MatSnackBarModule
     ],
     exports: [
         BrandsDeleteComponent,

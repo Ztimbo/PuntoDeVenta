@@ -1,5 +1,6 @@
-import { AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 import { Brand } from '../../interfaces/brand';
 import { BrandsService } from '../../services/brands.service';
 import { BrandsDeleteComponent } from '../brands-delete/brands-delete.component';
@@ -14,6 +15,7 @@ export class BrandsListComponent implements OnInit {
   public title: string = "Marcas";
 
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+  @ViewChild('brandsTable') detailsTable: MatTable<Brand> | undefined;
 
   public displayedColumns: string[] = ['name', 'description', '-'];
   public dataSource: Brand[] = [];
@@ -23,9 +25,13 @@ export class BrandsListComponent implements OnInit {
     public readonly brandsService: BrandsService
     ) { }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(BrandsDeleteComponent, {
       width: '250px',
+      data: { brandId: id }
+    }).afterClosed().subscribe(() => {
+      this.getBrands();
+      this.detailsTable?.renderRows();
     });
   }
 
