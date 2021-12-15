@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 import { Category } from '../../interfaces/category';
 import { CategoriesService } from '../../services/categories.service';
 import { CategoriesDeleteComponent } from '../categories-delete/categories-delete.component';
@@ -14,6 +15,7 @@ export class CategoriesListComponent implements OnInit {
   public title: string = "Categorías";
 
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+  @ViewChild('categoriesTable') detailsTable: MatTable<Category> | undefined;
 
   public displayedColumns: string[] = ['name', 'description', '-'];
   public dataSource: Category[] = [];
@@ -23,9 +25,13 @@ export class CategoriesListComponent implements OnInit {
     public readonly categoryService: CategoriesService
     ) { }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(CategoriesDeleteComponent, {
       width: '250px',
+      data: { categoryId: id }
+    }).afterClosed().subscribe(() => {
+      this.getBrands();
+      this.detailsTable?.renderRows();
     });
   }
 

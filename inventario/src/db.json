@@ -67,12 +67,12 @@
   ],
   "categories": [
     {
-      "categoryId": 1,
+      "id": 1,
       "name": "Categoría 1",
       "description": ""
     },
     {
-      "categoryId": 2,
+      "id": 2,
       "name": "Categoría 2",
       "description": ""
     }
