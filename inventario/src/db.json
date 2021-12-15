@@ -1,42 +1,42 @@
 {
   "providers": [
     {
-      "providerId": 1,
+      "id": 1,
       "name": "Provider 1",
       "description": "",
       "phoneNumber": 11111111111,
       "email": "provider1@email.com"
     },
     {
-      "providerId": 2,
+      "id": 2,
       "name": "Provider 2",
       "description": "",
       "phoneNumber": 11111111111,
       "email": "provider2@email.com"
     },
     {
-      "providerId": 3,
+      "id": 3,
       "name": "Provider 3",
       "description": "",
       "phoneNumber": 11111111111,
       "email": "provider3@email.com"
     },
     {
-      "providerId": 4,
+      "id": 4,
       "name": "Provider 4",
       "description": "",
       "phoneNumber": 11111111111,
       "email": "provider4@email.com"
     },
     {
-      "providerId": 5,
+      "id": 5,
       "name": "Provider 5",
       "description": "",
       "phoneNumber": 11111111111,
       "email": "provider5@email.com"
     },
     {
-      "providerId": 6,
+      "id": 6,
       "name": "Provider 6",
       "description": "",
       "phoneNumber": 11111111111,
@@ -85,69 +85,69 @@
     },
     {
       "id": 2,
-      "name": "Presentación 2 tds",
-      "description": "sss"
+      "name": "Presentación 2",
+      "description": ""
     }
   ],
   "products": [
     {
-      "productId": 1,
+      "id": 1,
       "name": "Aspirina",
       "description": "",
       "priceBuy": 50,
       "priceSell": 60,
-      "provider": "Proveedor 1",
-      "brand": "Pfizer",
-      "category": "Category 1",
-      "presentation": "Presentación 1",
+      "providersId": 1,
+      "brandsId": 1,
+      "categoriesId": 1,
+      "presentationsId": 1,
       "barCode": "CODIGODEBARRAS"
     },
     {
-      "productId": 2,
+      "id": 2,
       "name": "Omeprazol",
       "description": "",
       "priceBuy": 50,
       "priceSell": 60,
-      "provider": "Proveedor 1",
-      "brand": "Pfizer",
-      "category": "Category 1",
-      "presentation": "Presentación 1",
+      "providersId": 2,
+      "brandsId": 2,
+      "categoriesId": 2,
+      "presentationsId": 2,
       "barCode": "CODIGODEBARRAS"
     },
     {
-      "productId": 3,
+      "id": 3,
       "name": "Broxol",
       "description": "",
       "priceBuy": 50,
       "priceSell": 60,
-      "provider": "Proveedor 1",
-      "brand": "Pfizer",
-      "category": "Category 1",
-      "presentation": "Presentación 1",
+      "providersId": 2,
+      "brandsId": 2,
+      "categoriesId": 2,
+      "presentationsId": 2,
       "barCode": "CODIGODEBARRAS"
     },
     {
-      "productId": 4,
+      "id": 4,
       "name": "Amoxicilina",
       "description": "",
       "priceBuy": 50,
       "priceSell": 60,
-      "provider": "Proveedor 1",
-      "brand": "Pfizer",
-      "category": "Category 1",
-      "presentation": "Presentación 1",
+      "providersId": 2,
+      "brandsId": 2,
+      "categoriesId": 2,
+      "presentationsId": 2,
       "barCode": "CODIGODEBARRAS"
     },
     {
-      "productId": 5,
+      "id": 5,
       "name": "Paracetamol",
       "description": "",
       "priceBuy": 50,
       "priceSell": 60,
-      "provider": "Proveedor 1",
-      "brand": "Pfizer",
-      "category": "Category 1",
-      "presentation": "Presentación 1",
+      "providersId": 2,
+      "brandsId": 2,
+      "categoriesId": 2,
+      "presentationsId": 2,
       "barCode": "CODIGODEBARRAS"
     }
   ],

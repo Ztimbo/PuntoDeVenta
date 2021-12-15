@@ -14,7 +14,7 @@ export class ProductsService {
   ) { }
 
   public getProducts(): Observable<Product[]> {
-    const url: string = environment.API_JSON_SERVER_URL + '/products';
+    const url: string = environment.API_JSON_SERVER_URL + '/products?_expand=providers&_expand=brands&_expand=categories&_expand=presentations';
     return this._httpClient.get<Product[]>(url);
   }
 }
