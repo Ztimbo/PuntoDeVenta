@@ -33,6 +33,7 @@ export class PresentationsDeleteComponent implements OnInit {
       this.loadingPage.style.display = 'none';
       this.snackBar.open('Presentación eliminada', 'Aceptar', { duration: 3000, panelClass: ['info-snack-bar'] });
       this.onNoClick();
+      
     });
   }
 
