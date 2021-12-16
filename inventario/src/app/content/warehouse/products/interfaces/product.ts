@@ -4,9 +4,9 @@ export interface Product {
     description?: string,
     priceBuy: number,
     priceSell: number,
-    brand: number,
-    provider: number,
-    category: number,
-    presentation: number,
+    brandsId: number,
+    providersId: number,
+    categoriesId: number,
+    presentationsId: number,
     barCode: string
 }

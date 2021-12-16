@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 import { Product } from '../../interfaces/product';
 import { ProductsService } from '../../services/products.service';
 import { ProductsDeleteComponent } from '../products-delete/products-delete.component';
@@ -14,6 +15,7 @@ export class ProductsListComponent implements OnInit {
   public title: string = "Productos";
 
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
+  @ViewChild('productsTable') detailsTable: MatTable<Product> | undefined;
 
   public displayedColumns: string[] = ['name', 'description', 'priceBuy', 'priceSell', 'brand', 'provider', 'category', 'presentation', 'barCode', '-'];
   public dataSource: Product[] = [];
@@ -28,9 +30,13 @@ export class ProductsListComponent implements OnInit {
     this.getProducts();
   }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(ProductsDeleteComponent, {
       width: '250px',
+      data: { productId: id }
+    }).afterClosed().subscribe(() => {
+      this.getProducts();
+      this.detailsTable?.renderRows();
     });
   }
 
