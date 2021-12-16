@@ -1,7 +1,13 @@
+#editar-producto-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .editar-producto-box {
     display: grid;
     grid-template-rows: 1fr, 2fr;
-    width: 30%;
+    width: 50%;
 
     button {
         width: 50%;

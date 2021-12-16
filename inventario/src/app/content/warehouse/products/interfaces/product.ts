@@ -1,12 +1,12 @@
 export interface Product {
-    productId: number,
+    id: number,
     name: string,
     description?: string,
     priceBuy: number,
     priceSell: number,
-    brand: string,
-    provider: string,
-    category: string,
-    presentation: string,
+    brandsId: number,
+    providersId: number,
+    categoriesId: number,
+    presentationsId: number,
     barCode: string
 }

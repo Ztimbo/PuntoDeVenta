@@ -1,5 +1,6 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatOptionModule } from "@angular/material/core";
@@ -40,7 +41,8 @@ import { ProductsService } from "./services/products.service";
         MatOptionModule,
         MatSelectModule,
         BrowserModule,
-        MatMenuModule
+        MatMenuModule,
+        ReactiveFormsModule
     ],
     exports: [
         ProductsContainerComponent,
