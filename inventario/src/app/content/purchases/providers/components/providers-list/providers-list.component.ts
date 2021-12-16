@@ -39,9 +39,13 @@ export class ProvidersListComponent implements OnInit {
     //this.getProviders();
   }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(ProvidersDeleteComponent, {
       width: '250px',
+      data: { providerId: id }
+    }).afterClosed().subscribe(() => {
+      this.getProviders();
+      this.providersTable?.renderRows();
     });
   }
 

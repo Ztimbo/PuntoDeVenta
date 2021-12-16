@@ -32,10 +32,10 @@
                 <mat-icon>calendar_view_day</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-                <a mat-menu-item routerLink="/proveedores/editar/{{element.providerId}}" class="providers-list-icons providers-list-icons-edit">
+                <a mat-menu-item routerLink="/proveedores/editar/{{element.id}}" class="providers-list-icons providers-list-icons-edit">
                     Editar <mat-icon>edit</mat-icon>
                 </a>
-                <a mat-menu-item (click)="openDialog()" class="providers-list-icons providers-list-icons-delete">
+                <a mat-menu-item (click)="openDialog(element.id)" class="providers-list-icons providers-list-icons-delete">
                     Eliminar <mat-icon>delete</mat-icon>
                 </a>
             </mat-menu>
