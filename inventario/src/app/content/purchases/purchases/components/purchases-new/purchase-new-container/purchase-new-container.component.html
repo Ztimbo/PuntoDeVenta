@@ -1,6 +1,10 @@
 <inventario-content-title [title]="title"></inventario-content-title>
 
 <div id="purchases-container">
-    <inventario-purchase-detail (sendTotal)="printData($event)"></inventario-purchase-detail>
-    <inventario-purchase-calc [total]="total"></inventario-purchase-calc>
+    <inventario-purchase-detail 
+        (sendTotal)="printData($event)"
+        (sendDetail)="getOrderDetail($event)"></inventario-purchase-detail>
+    <inventario-purchase-calc 
+        [total]="total"
+        (guardarOrden)="guardarOrden()"></inventario-purchase-calc>
 </div> 

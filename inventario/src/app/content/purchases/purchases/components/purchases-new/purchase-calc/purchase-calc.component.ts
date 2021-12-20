@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'inventario-purchase-calc',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PurchaseCalcComponent implements OnInit {
 
   @Input() public total: number = 0;
+  @Output() public guardarOrden = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public guardaOrden() {
+    this.guardarOrden.emit('');
   }
 
 }
