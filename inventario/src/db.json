@@ -153,22 +153,89 @@
   ],
   "purchases": [
     {
-      "orderId": 1,
+      "id": 1,
       "orderDate": "12/12/2021",
       "total": 500,
       "status": "completa"
     },
     {
-      "orderId": 2,
+      "id": 2,
       "orderDate": "12/12/2021",
       "total": 700,
       "status": "en camino"
     },
     {
-      "orderId": 3,
+      "id": 3,
       "orderDate": "12/12/2021",
       "total": 800,
       "status": "cancelada"
+    },
+    {
+      "orderDate": "2021-12-20T20:10:07.755Z",
+      "status": "en camino",
+      "total": 200,
+      "id": 4
+    },
+    {
+      "orderDate": "2021-12-20T20:13:06.429Z",
+      "status": "en camino",
+      "total": 1650,
+      "id": 5
+    }
+  ],
+  "purchase-detail": [
+    {
+      "id": 1,
+      "purchasesId": 1,
+      "productsId": 1,
+      "quantity": 4,
+      "price": 30
+    },
+    {
+      "id": 2,
+      "purchasesId": 1,
+      "productsId": 2,
+      "quantity": 4,
+      "price": 30
+    },
+    {
+      "id": 3,
+      "purchasesId": 2,
+      "productsId": 1,
+      "quantity": 4,
+      "price": 30
+    },
+    {
+      "productsId": 5,
+      "name": "Paracetamol",
+      "quantity": 4,
+      "price": 50,
+      "purchasesId": 4,
+      "id": 4
+    },
+    {
+      "productsId": 2,
+      "name": "Omeprazol",
+      "quantity": 10,
+      "price": 50,
+      "purchasesId": 5,
+      "id": 5
+    },
+    {
+      "productsId": 4,
+      "name": "Amoxicilina",
+      "quantity": 16,
+      "price": 50,
+      "purchasesId": 5,
+      "id": 6
+    },
+    {
+      "productsId": 5,
+      "name": "Paracetamol",
+      "quantity": 7,
+      "price": 50,
+      "purchasesId": 5,
+      "id": 7
     }
   ]
 }

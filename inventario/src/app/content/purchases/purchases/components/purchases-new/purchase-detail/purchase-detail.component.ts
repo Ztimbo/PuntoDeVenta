@@ -4,18 +4,15 @@ import { Observable } from 'rxjs';
 import { Product } from 'src/app/content/warehouse/products/interfaces/product';
 import { ProductsService } from 'src/app/content/warehouse/products/services/products.service';
 import { Provider } from '../../../../providers/interfaces/provider';
+import { Purchase } from '../../../interfaces/purchase';
 import { ProvidersService } from '../../../../providers/services/providers.service';
 import { map, startWith } from 'rxjs/operators';
 import { MatTable } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSelect } from '@angular/material/select';
+import { PurchaseDetail } from '../../../interfaces/purchaseDetail';
 
-export interface PeriodicElement {
-  name: string;
-  quantity: number;
-  price: number;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [];
+const ELEMENT_DATA: PurchaseDetail[] = [];
 
 @Component({
   selector: 'inventario-purchase-detail',
@@ -34,8 +31,10 @@ export class PurchaseDetailComponent implements OnInit {
 
   @ViewChild('detailsTable') detailsTable: MatTable<Provider> | undefined;
   @ViewChild('product') inputProduct: any;
+  @ViewChild('provider') selectProvider: MatSelect | undefined;
 
   @Output() sendTotal = new EventEmitter<number>();
+  @Output() sendDetail = new EventEmitter<PurchaseDetail[]>();
 
   displayedColumns: string[] = ['name', 'quantity', 'price', '-'];
   dataSource = ELEMENT_DATA;
@@ -71,7 +70,8 @@ export class PurchaseDetailComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    let filteredProducts: Product[] = this.products.filter(product => product.name.toLowerCase().includes(filterValue));
+    let filteredProducts: Product[] = this.products.filter(product => product.providersId == this.selectProvider?.value
+      && product.name.toLowerCase().includes(filterValue));
     let filteredNameProducts: string[] = [];
     filteredProducts.forEach((product, index) => {
       filteredNameProducts.push(product.name);
@@ -83,6 +83,7 @@ export class PurchaseDetailComponent implements OnInit {
     ELEMENT_DATA[purchaseItem].quantity += 1;
     this.detailsTable?.renderRows();
     this.getTotal();
+    this.sendDetail.emit(ELEMENT_DATA);
   }
 
   public decrementQuantity(purchaseItem: number): void {
@@ -90,6 +91,7 @@ export class PurchaseDetailComponent implements OnInit {
     ELEMENT_DATA[purchaseItem].quantity -= 1;
     this.detailsTable?.renderRows();
     this.getTotal();
+    this.sendDetail.emit(ELEMENT_DATA);
   }
 
   private getTotal(): void {
@@ -107,6 +109,7 @@ export class PurchaseDetailComponent implements OnInit {
     ELEMENT_DATA.splice(indexRow, 1);
     this.detailsTable?.renderRows();
     this.getTotal();
+    this.sendDetail.emit(ELEMENT_DATA);
   }
 
   public onChangeEvent($data: any) {
@@ -119,14 +122,22 @@ export class PurchaseDetailComponent implements OnInit {
 
     if(exists && !alreadyAdded) {
       let orderProduct = this.products.filter(x => x.name === productName)[0];
-      ELEMENT_DATA.push({ name: orderProduct.name, quantity: 1, price: orderProduct.priceBuy });
+      ELEMENT_DATA.push({ productsId: orderProduct.id, name: orderProduct.name, quantity: 1, price: orderProduct.priceBuy, purchasesId: 0 });
       this.detailsTable?.renderRows();
     }
 
     if(!exists) this.snackBar.open('El producto no existe', 'Aceptar', { duration: 3000, panelClass: ['error-snack-bar'] });
     if(alreadyAdded) this.snackBar.open('El producto ya existe en la orden', 'Aceptar', { duration: 3000, panelClass: ['error-snack-bar'] });
 
+    this.sendDetail.emit(ELEMENT_DATA);
+
     this.inputProduct.nativeElement.value = '';
+  }
+
+  public cleanTable() {
+    ELEMENT_DATA.length = 0;
+    this._filter('');
+    this.detailsTable?.renderRows();
   }
 
 }
