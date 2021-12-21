@@ -14,7 +14,6 @@ import { PresentationsModule } from './content/warehouse/presentations/app.modul
 import { PurchasesModule } from './content/purchases/purchases/app.module-purchases';
 import { SalesModule } from './content/sales/app.module-sales';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { InventoryModule } from './content/warehouse/inventory/app.module-inventory';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -35,7 +34,6 @@ import { MatIconModule } from '@angular/material/icon';
     PurchasesModule,
     SalesModule,
     MatProgressSpinnerModule,
-    InventoryModule,
     MatIconModule
   ],
   providers: [],

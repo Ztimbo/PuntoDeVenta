@@ -7,7 +7,16 @@
     </div>
     <div class="purchase-info-cell">
         <b>Estatus de compra</b>
-        <span>{{ purchase.status }}</span>
+        <div>
+            <span>{{ purchase.status | uppercase }}</span>
+            <button *ngIf="purchase.status == 'en camino'" mat-icon-button color="primary" [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="compeltePurchase()">Completar</button>
+                <button mat-menu-item (click)="cancelPurchase()">Cancelar</button>
+            </mat-menu>
+        </div>
     </div>
     <div class="purchase-info-cell">
         <b>Total</b>

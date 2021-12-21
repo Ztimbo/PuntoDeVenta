@@ -17,7 +17,7 @@ export class ProductsListComponent implements OnInit {
   public loadingPage: HTMLElement = document.getElementById('loading-screen') as HTMLElement;
   @ViewChild('productsTable') detailsTable: MatTable<Product> | undefined;
 
-  public displayedColumns: string[] = ['name', 'description', 'priceBuy', 'priceSell', 'brand', 'provider', 'category', 'presentation', 'barCode', '-'];
+  public displayedColumns: string[] = ['name', 'description', 'stock', 'priceBuy', 'priceSell', 'brand', 'provider', 'category', 'presentation', 'barCode', '-'];
   public dataSource: Product[] = [];
 
   constructor(

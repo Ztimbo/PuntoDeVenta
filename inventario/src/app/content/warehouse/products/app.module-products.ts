@@ -13,6 +13,7 @@ import { MatTableModule } from "@angular/material/table";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "src/app/app-routing.module";
 import { GlobalModule } from "src/app/global/app.module-global";
+import { StockAvailability } from "src/app/global/custom-pipes/stock-availability";
 import { ProductsContainerComponent } from "./components/products-container/products-container.component";
 import { ProductsDeleteComponent } from "./components/products-delete/products-delete.component";
 import { ProductsEditComponent } from "./components/products-edit/products-edit.component";
@@ -26,7 +27,8 @@ import { ProductsService } from "./services/products.service";
         ProductsDeleteComponent,
         ProductsEditComponent,
         ProductsListComponent,
-        ProductsNewComponent
+        ProductsNewComponent,
+        StockAvailability
     ],
     imports: [
         AppRoutingModule,
