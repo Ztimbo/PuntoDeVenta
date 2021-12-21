@@ -28,6 +28,7 @@ export class ProductsNewComponent implements OnInit {
   public nuevoProducto: FormGroup = this.formBuilder.group({
     producto: new FormControl('', Validators.required),
     descripcion: new FormControl(),
+    cantidad: new FormControl('', Validators.required),
     precioCompra: new FormControl('', Validators.required),
     precioVenta: new FormControl('', Validators.required),
     marcaId: new FormControl(),
@@ -88,6 +89,7 @@ export class ProductsNewComponent implements OnInit {
     if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
     this.producto.name = this.nuevoProducto.value.producto;
     this.producto.description = this.nuevoProducto.value.descripcion;
+    this.producto.quantity = this.nuevoProducto.value.cantidad;
     this.producto.priceBuy = this.nuevoProducto.value.precioCompra;
     this.producto.priceSell = this.nuevoProducto.value.precioVenta;
     this.producto.brandsId = this.nuevoProducto.value.marcaId;

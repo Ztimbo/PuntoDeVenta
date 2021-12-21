@@ -15,14 +15,21 @@
         </mat-form-field>
 
         <mat-form-field class="nuevo-producto-input" appearance="outline">
+          <mat-label>Cantidad</mat-label>
+          <input matInput type="number" formControlName="cantidad">
+      </mat-form-field>
+
+        <mat-form-field class="nuevo-producto-input" appearance="outline">
             <mat-label>Precio de Compra</mat-label>
             <input matInput formControlName="precioCompra">
+            <mat-icon matSuffix>attach_money</mat-icon>
             <mat-error *ngIf="nuevoProducto.get('precioCompra')?.hasError('required')">El campo precio de compra es obligatorio</mat-error>
         </mat-form-field>
 
         <mat-form-field class="nuevo-producto-input" appearance="outline">
             <mat-label>Precio de Venta</mat-label>
             <input matInput formControlName="precioVenta">
+            <mat-icon matSuffix>attach_money</mat-icon>
             <mat-error *ngIf="nuevoProducto.get('precioVenta')?.hasError('required')">El campo precio de venta es obligatorio</mat-error>
         </mat-form-field>
 

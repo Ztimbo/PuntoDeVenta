@@ -100,6 +100,7 @@
       "brandsId": 1,
       "categoriesId": 1,
       "presentationsId": 1,
+      "quantity": 15,
       "barCode": "CODIGODEBARRAS"
     },
     {
@@ -112,7 +113,30 @@
       "brandsId": 2,
       "categoriesId": 2,
       "presentationsId": 2,
-      "barCode": "CODIGODEBARRAS"
+      "quantity": 20,
+      "barCode": "CODIGODEBARRAS",
+      "providers": {
+        "id": 2,
+        "name": "Provider 2",
+        "description": "",
+        "phoneNumber": 11111111111,
+        "email": "provider2@email.com"
+      },
+      "brands": {
+        "id": 2,
+        "name": "Bayer",
+        "description": "Descripción"
+      },
+      "categories": {
+        "id": 2,
+        "name": "Categoría 2",
+        "description": ""
+      },
+      "presentations": {
+        "id": 2,
+        "name": "Presentación 2",
+        "description": ""
+      }
     },
     {
       "id": 3,
@@ -124,6 +148,7 @@
       "brandsId": 2,
       "categoriesId": 2,
       "presentationsId": 2,
+      "quantity": 6,
       "barCode": "CODIGODEBARRAS"
     },
     {
@@ -136,7 +161,30 @@
       "brandsId": 2,
       "categoriesId": 2,
       "presentationsId": 2,
-      "barCode": "CODIGODEBARRAS"
+      "quantity": 21,
+      "barCode": "CODIGODEBARRAS",
+      "providers": {
+        "id": 2,
+        "name": "Provider 2",
+        "description": "",
+        "phoneNumber": 11111111111,
+        "email": "provider2@email.com"
+      },
+      "brands": {
+        "id": 2,
+        "name": "Bayer",
+        "description": "Descripción"
+      },
+      "categories": {
+        "id": 2,
+        "name": "Categoría 2",
+        "description": ""
+      },
+      "presentations": {
+        "id": 2,
+        "name": "Presentación 2",
+        "description": ""
+      }
     },
     {
       "id": 5,
@@ -148,7 +196,65 @@
       "brandsId": 2,
       "categoriesId": 2,
       "presentationsId": 2,
-      "barCode": "CODIGODEBARRAS"
+      "quantity": 7,
+      "barCode": "CODIGODEBARRAS",
+      "providers": {
+        "id": 2,
+        "name": "Provider 2",
+        "description": "",
+        "phoneNumber": 11111111111,
+        "email": "provider2@email.com"
+      },
+      "brands": {
+        "id": 2,
+        "name": "Bayer",
+        "description": "Descripción"
+      },
+      "categories": {
+        "id": 2,
+        "name": "Categoría 2",
+        "description": ""
+      },
+      "presentations": {
+        "id": 2,
+        "name": "Presentación 2",
+        "description": ""
+      }
+    },
+    {
+      "name": "Prueba",
+      "description": null,
+      "quantity": 15,
+      "priceBuy": "57",
+      "priceSell": "90",
+      "brandsId": "3",
+      "providersId": "4",
+      "categoriesId": "2",
+      "presentationsId": "2",
+      "barCode": "CODIGODEBARRAS",
+      "id": 6,
+      "providers": {
+        "id": 4,
+        "name": "Provider 4",
+        "description": "",
+        "phoneNumber": 11111111111,
+        "email": "provider4@email.com"
+      },
+      "brands": {
+        "id": 3,
+        "name": "Johnson & Johnson",
+        "description": "Johnson & Johnson desc"
+      },
+      "categories": {
+        "id": 2,
+        "name": "Categoría 2",
+        "description": ""
+      },
+      "presentations": {
+        "id": 2,
+        "name": "Presentación 2",
+        "description": ""
+      }
     }
   ],
   "purchases": [
@@ -162,7 +268,7 @@
       "id": 2,
       "orderDate": "12/12/2021",
       "total": 700,
-      "status": "en camino"
+      "status": "cancelada"
     },
     {
       "id": 3,
@@ -172,15 +278,27 @@
     },
     {
       "orderDate": "2021-12-20T20:10:07.755Z",
-      "status": "en camino",
+      "status": "cancelada",
       "total": 200,
       "id": 4
     },
     {
       "orderDate": "2021-12-20T20:13:06.429Z",
-      "status": "en camino",
+      "status": "completa",
       "total": 1650,
       "id": 5
+    },
+    {
+      "orderDate": "2021-12-21T15:57:50.267Z",
+      "status": "en camino",
+      "total": 550,
+      "id": 6
+    },
+    {
+      "orderDate": "2021-12-21T20:09:47.624Z",
+      "status": "completa",
+      "total": 570,
+      "id": 7
     }
   ],
   "purchase-detail": [
@@ -236,6 +354,22 @@
       "price": 50,
       "purchasesId": 5,
       "id": 7
+    },
+    {
+      "productsId": 5,
+      "name": "Paracetamol",
+      "quantity": 11,
+      "price": 50,
+      "purchasesId": 6,
+      "id": 8
+    },
+    {
+      "productsId": 6,
+      "name": "Prueba",
+      "quantity": 10,
+      "price": "57",
+      "purchasesId": 7,
+      "id": 9
     }
   ]
 }

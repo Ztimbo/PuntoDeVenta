@@ -8,5 +8,6 @@ export interface Product {
     providersId: number,
     categoriesId: number,
     presentationsId: number,
+    quantity: number,
     barCode: string
 }

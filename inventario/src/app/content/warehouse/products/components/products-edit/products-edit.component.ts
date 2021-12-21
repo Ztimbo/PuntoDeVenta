@@ -28,6 +28,7 @@ export class ProductsEditComponent implements OnInit {
   public editProducto: FormGroup = this.formBuilder.group({
     producto: new FormControl('', Validators.required),
     descripcion: new FormControl(),
+    cantidad: new FormControl('', Validators.required),
     precioCompra: new FormControl('', Validators.required),
     precioVenta: new FormControl('', Validators.required),
     marcaId: new FormControl(),
@@ -91,6 +92,7 @@ export class ProductsEditComponent implements OnInit {
       this.product.id = response.id;
       this.product.name = response.name;
       this.product.description = response.description;
+      this.product.quantity = response.quantity;
       this.product.priceBuy = response.priceBuy;
       this.product.priceSell = response.priceSell;
       this.product.brandsId = response.brandsId;
@@ -102,12 +104,13 @@ export class ProductsEditComponent implements OnInit {
       this.editProducto.patchValue({
         producto: response.name,
         descripcion: response.description,
+        cantidad: response.quantity,
         precioCompra: response.priceBuy,
         precioVenta: response.priceSell,
-        marcaId: response.brandsId,
-        proveedorId: response.providersId,
-        categoriaId: response.categoriesId,
-        presentacionId: response.presentationsId,
+        marcaId: parseInt(response.brandsId.toString()),
+        proveedorId: parseInt(response.providersId.toString()),
+        categoriaId: parseInt(response.categoriesId.toString()),
+        presentacionId: parseInt(response.presentationsId.toString()),
         codigoBarras: response.barCode
       });
 
