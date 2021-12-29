@@ -220,41 +220,6 @@
         "name": "Presentación 2",
         "description": ""
       }
-    },
-    {
-      "name": "Prueba",
-      "description": null,
-      "quantity": 15,
-      "priceBuy": "57",
-      "priceSell": "90",
-      "brandsId": "3",
-      "providersId": "4",
-      "categoriesId": "2",
-      "presentationsId": "2",
-      "barCode": "CODIGODEBARRAS",
-      "id": 6,
-      "providers": {
-        "id": 4,
-        "name": "Provider 4",
-        "description": "",
-        "phoneNumber": 11111111111,
-        "email": "provider4@email.com"
-      },
-      "brands": {
-        "id": 3,
-        "name": "Johnson & Johnson",
-        "description": "Johnson & Johnson desc"
-      },
-      "categories": {
-        "id": 2,
-        "name": "Categoría 2",
-        "description": ""
-      },
-      "presentations": {
-        "id": 2,
-        "name": "Presentación 2",
-        "description": ""
-      }
     }
   ],
   "purchases": [
@@ -299,6 +264,18 @@
       "status": "completa",
       "total": 570,
       "id": 7
+    },
+    {
+      "orderDate": "2021-12-27T18:01:02.716Z",
+      "status": "en camino",
+      "total": 350,
+      "id": 8
+    },
+    {
+      "orderDate": "2021-12-27T20:12:12.295Z",
+      "status": "en camino",
+      "total": 250,
+      "id": 9
     }
   ],
   "purchase-detail": [
@@ -364,12 +341,20 @@
       "id": 8
     },
     {
-      "productsId": 6,
-      "name": "Prueba",
-      "quantity": 10,
-      "price": "57",
-      "purchasesId": 7,
+      "productsId": 2,
+      "name": "Omeprazol",
+      "quantity": 7,
+      "price": 50,
+      "purchasesId": 8,
       "id": 9
+    },
+    {
+      "productsId": 2,
+      "name": "Omeprazol",
+      "quantity": 5,
+      "price": 50,
+      "purchasesId": 9,
+      "id": 10
     }
   ]
 }

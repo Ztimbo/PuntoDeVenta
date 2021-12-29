@@ -26,6 +26,9 @@ import { SalesContainerComponent } from './content/sales/components/sales-contai
 import { PurchasesListComponent } from './content/purchases/purchases/components/purchases-list/purchases-list.component';
 import { PurchaseNewContainerComponent } from './content/purchases/purchases/components/purchases-new/purchase-new-container/purchase-new-container.component';
 import { PurchasesDetailComponent } from './content/purchases/purchases/components/purchases-detail/purchases-detail.component';
+import { SalesListComponent } from './content/sales/components/sales-list/sales-list.component';
+import { SalesNewComponent } from './content/sales/components/sales-new/sales-new.component';
+import { SalesDetailComponent } from './content/sales/components/sales-detail/sales-detail.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalDashboardComponent },
@@ -59,7 +62,11 @@ const routes: Routes = [
     { path: 'nuevo', component: PurchaseNewContainerComponent },
     { path: 'detalle/:purchaseId', component: PurchasesDetailComponent }
   ] },
-  { path: 'ventas', component: SalesContainerComponent }
+  { path: 'ventas', component: SalesContainerComponent, children: [
+    { path: '', component: SalesNewComponent },
+    { path: 'consulta', component: SalesListComponent },
+    { path: 'detalle/:saleId', component: SalesDetailComponent }
+  ] }
 ];
 
 @NgModule({

@@ -35,8 +35,7 @@ export class ProvidersListComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.loadingPage.style.display !== 'grid') this.loadingPage.style.display = 'grid';
-    this.getArray();
-    //this.getProviders();
+    this.getProviders();
   }
 
   openDialog(id: number): void {
@@ -52,6 +51,7 @@ export class ProvidersListComponent implements OnInit {
   public getProviders(): void {
     this.providersService.getProviders().subscribe((response: Provider[]) => {
       this.dataSource = response;
+      this.loadingPage.style.display = 'none';
     });
   }
 
@@ -84,32 +84,6 @@ export class ProvidersListComponent implements OnInit {
       }
     });
     this.providersTable?.renderRows();
-  }
-
-  public paginateData($event: any) {
-    this.currentPage = $event.pageIndex;
-    this.pageSize = $event.pageSize;
-    this.iterator();
-  }
-
-  private getArray() {
-    this.providersService.getProviders()
-      .subscribe((response) => {
-        this.dataSource = new MatTableDataSource<any>(response);
-        this.dataSource.paginator = this.paginator;
-        this.array = response;
-        this.totalSize = this.array.length;
-        this.iterator();
-
-        this.loadingPage.style.display = 'none';
-      });
-  }
-
-  private iterator() {
-    const end = (this.currentPage + 1) * this.pageSize;
-    const start = this.currentPage * this.pageSize;
-    const part = this.array.slice(start, end);
-    this.dataSource = part;
   }
 
 }
